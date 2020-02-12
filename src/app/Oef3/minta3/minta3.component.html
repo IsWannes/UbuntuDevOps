@@ -1,0 +1,48 @@
+<h1>{{currTitle}}</h1>
+<p><b>Niets te doen?</b></p>
+
+
+
+<div *ngIf="BoredServiceDisplayInfo">  
+<h4>HIER IS EEN RANDOM ACTIVITEIT!</h4>
+<div class="grid-container">
+    <div class="grid-item">Activity:</div>
+    <div class="grid-item">{{BoredServiceDisplayInfo.activity}}</div>
+    <div class="grid-item">Type:</div>
+    <div class="grid-item">{{BoredServiceDisplayInfo.type}}</div>
+    <div class="grid-item">Participants:</div>
+    <div class="grid-item">{{BoredServiceDisplayInfo.participants}}</div>
+    <div class="grid-item">Price:</div>
+    <div class="grid-item">{{BoredServiceDisplayInfo.price}}</div>
+    <div class="grid-item">Key:</div>
+    <div class="grid-item">{{BoredServiceDisplayInfo.key}}</div>
+    
+  </div>
+<p><i>price: 0 = free | 1 = expensive</i></p>
+</div>
+
+ <h4>Geef de key van de activity die je wil opzoeken</h4>
+<input [(ngModel)]="activityKey" placeholder="Enter key...">
+<button (click)="EnableSearch(activityKey)">Zoek Activity</button>
+<p>Er wordt gezocht naar: {{activityKey}}</p>
+<div *ngIf="EnableBoredSearch">  
+  <hr>
+  <h4>UITKOMST VAN DE API:</h4>
+  <div class="grid-container">
+      <div class="grid-item">Activity:</div>
+      <div class="grid-item">{{EnableBoredSearch.activity}}</div>
+      <div class="grid-item">Type:</div>
+      <div class="grid-item">{{EnableBoredSearch.type}}</div>
+      <div class="grid-item">Participants:</div>
+      <div class="grid-item">{{EnableBoredSearch.participants}}</div>
+      <div class="grid-item">Price:</div>
+      <div class="grid-item">{{EnableBoredSearch.price}}</div>
+      <div class="grid-item">Key:</div>
+      <div class="grid-item">{{EnableBoredSearch.key}}</div>
+      
+    </div>
+  <p><i>price: 0 = free | 1 = expensive</i></p>
+  <hr>
+</div>
+
+<app-minta-child [ParentMessage]="ParentMessage"></app-minta-child>

@@ -1,0 +1,24 @@
+<div>Kerem Yilmaz</div>
+
+<div>
+
+    <div (mouseover)="ChangeStyle($event)">
+    <h2>Boodschappenlijst</h2> 
+    </div>
+    <input [placeholder]="Placeholder" [(ngModel)] = "Waarde" #Val type="text">
+    <select [(ngModel)]="Counter">
+        <option value="1">Prioriteit Hoog</option>
+        <option value="2">Prioriteit Laag</option>
+    </select>
+    <button [disabled]="Waarde == ''" (click)="AddList(Val.value)">Toevoegen</button>
+    <br>
+    
+    <br>
+
+    <div *ngFor="let Boodschappen of BoodschappenLijst">{{Boodschappen}}</div>
+
+    <br>
+
+    <button *ngIf="BoodschappenLijst.length >= 1" (click) = "ResetLijst()">Clear</button>
+
+</div>  

@@ -1,0 +1,61 @@
+<h2>Eigen service</h2>
+<div id="topdiv">
+  <div id="innertoprightdiv">
+    <p class="innertoprightstuff"> Choose pokedex:
+      <select *ngIf="alldexes" [(ngModel)]="selectedOption" id="dexselect" (change)="getdex()">
+        <option *ngFor="let dex of alldexes.results" [value]="dex.name"> 
+            {{dex.name}}
+        </option>
+      </select>
+    </p>
+    <p class="innertoprightstuff" *ngIf="chosendex">Choose pokemon:
+      <select *ngIf="pokedex" name="Pokemonselect" id="pokemonselect" (change)="getpokemon()">
+        <option *ngFor="let pokemon of pokedex.pokemon_entries" [value]="pokemon.pokemon_species.name">
+          {{pokemon.entry_number}}. {{pokemon.pokemon_species.name}}
+        </option>
+      </select>
+    </p>
+    <button class="innertoprightstuff" *ngIf="showaddbutton" (click)="addpokemon()">Add pokemon to team</button>
+    <button class="innertoprightstuff" *ngIf="showdelbutton" (click)="DeletePokemon()">Delete selected Pokémon</button>
+    <button class="innertoprightstuff" *ngIf="showdelbutton" (click)="deletefullteam()">Delete entire team</button>
+    <h3 class="innertoprightstuff" *ngIf="teamfull">Team Zit Vol</h3>
+  </div>
+  <div id="innertopleftdiv">
+    <div *ngFor="let pok of pokemonteam">
+      <label class="innertopleftlabel"><input [(ngModel)]="pok.checked" class="innertopleftcheckbox" type="checkbox"
+          placeholder="1">
+        <p>{{pok.name}}</p>
+      </label>
+    </div>
+  </div>
+  <div id=innertopmid style="float: left;" *ngIf="Clickablepicture">
+    <span style='font-size:100px;float: left;'>&#8601;</span>
+    <h1 style="float: right;"> Click on a picture!</h1>
+  </div>
+</div>
+
+<div id="middiv">
+  <div class="pokemonteam">
+    <table border="1" *ngFor="let pok of pokemonteam">
+      <tr>
+        <th><input [(ngModel)]="pok.checked" style="float: left;" type="checkbox">{{pok.name}}</th>
+        <th *ngIf="pok.types.length > 1" colspan="2">Type(s)</th>
+        <th *ngIf="pok.types.length == 1">Type(s)</th>
+      </tr>
+      <tr>
+        <td id="picture" (click)="getpokemondata(pok)"><img src="{{pok.sprites.front_default}}"></td>
+        <td>{{pok.types[0].type.name}}</td>
+        <td *ngIf="pok.types.length > 1">{{pok.types[1].type.name}}</td>
+      </tr>
+    </table>
+  </div>
+  <div id="child" *ngIf="pokemonforchild">
+    <app-lobet-child *ngIf="showchild" [pokemon]="pokemonforchild"></app-lobet-child>
+  </div>
+</div>
+<h2>Andere service</h2>
+<div id="botdiv">
+  <button (click)="getmeme()">Random meme picture</button>
+  <h2 *ngIf="singlememe">Meme: {{singlememe.name}}</h2>
+  <img width="500" height="500" *ngIf="singlememe" src="{{singlememe.url}}">
+</div>

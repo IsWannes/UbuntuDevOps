@@ -1,0 +1,9 @@
+<div>
+    <p class="naam">{{naam}}</p>
+    <p>Je bent hier al {{teller}} minuten aan het rondhangen</p>
+    <p>Het is vandaag {{date | date}}</p>
+    <p>Het is vandaag al zo laat :  {{date | date : "HH:mm:ss"}}</p>
+    <button (click)="Klikstoevoegen()">Hoe vaak kun jij deze knop drukken ?</button>
+    <p class="counter">Je zit al aan {{kliks}} kliks</p>
+    <button>{{Randomgetal | number:'1.0-0'}}</button>
+    </div>

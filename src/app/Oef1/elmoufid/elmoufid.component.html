@@ -1,0 +1,42 @@
+<h1>Mini Game - EL Moufid Mohamed</h1>
+
+<div class="flex-container">
+   <p>{{theTime | date: "hh:mm:ss"}}</p>
+   <p>{{theTime | date}}</p>
+</div>
+
+<h4>Druk op "give number", er komt een getal op het scherm voor 1 seconden lang</h4>
+<h4>Lukt het jou om het getal te onthouden? (geef het getal in en druk op check number)</h4>
+
+
+
+<p>Select Mode: </p>
+
+<div class="flex-container">
+    <button class="{{ButtonClass1}}" (click)="ChangeMode('1')">EASY</button>
+    <button class="{{ButtonClass2}}" (click)="ChangeMode('2')">NORMAL</button>
+    <button class="{{ButtonClass3}}" (click)="ChangeMode('3')">HARD</button>
+</div>
+
+
+<div class="flex-container">
+    <p>Gewonne Geld:</p>
+    <p>{{Score | currency: 'EUR'}}</p>
+    <p>Rounds:</p>
+    <p>{{Rounds}}</p>
+</div>
+
+
+
+<h3 *ngIf="theNumber==0" >Het getal kom hier</h3>
+<h1 *ngIf="theNumber!=0" >{{theNumber}}</h1>
+
+<input #in1 type="text" name="" id="">
+
+<div class="flex-container2">
+    <button  (click)="StartGame()">Give Number</button>
+    <button  (click)="CheckNumber(in1.value)">Check Number</button>
+    <button   (click)="ResetGame()">Reset Game</button>
+</div>
+
+<p>© 2019, All rights resereved</p>

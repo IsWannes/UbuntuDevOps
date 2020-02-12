@@ -1,0 +1,27 @@
+.Everything{
+    background:rgb(36, 36, 36);
+    border-radius: 10pt;
+    color:hotpink;
+}
+input{
+    border: 1px solid hotpink;
+    background:rgb(36, 36, 36);
+    color: hotpink;
+    padding:10pt;
+    border-radius: 7pt;
+    margin-top:10pt;
+    margin-bottom: 10pt;
+}
+td{
+    color: green;
+}
+th{
+    color: green;
+}
+.rainbow{
+    width: 100%;
+    font-size: 40pt;;
+}
+.rainbowdiv{
+    width:100%;
+}

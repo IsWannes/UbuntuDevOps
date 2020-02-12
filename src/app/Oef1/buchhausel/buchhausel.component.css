@@ -1,0 +1,12 @@
+.first_box {
+    margin: 0%;
+    background-color: white;
+    border-style: dashed;
+}
+
+.second_box{
+    display: grid;
+    background-color: mediumvioletred;
+    border-style: groove;
+
+}

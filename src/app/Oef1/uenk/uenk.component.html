@@ -1,0 +1,16 @@
+<p>{{naam}}</p>
+<div class="card">
+    <h2>Calender:</h2>
+    <p>Datum: {{time | date: 'dd-MM-yyyy'}}</p>
+    <p>Tijd: <b>{{time | date: 'HH:mm:ss'}}</b></p>
+    <p>Bericht van de dag:</p>
+    <p *ngIf="hour < 7">Wow het is nog vroeg!</p>
+    <p *ngIf="hour >= 7 || hour <= 7">Een fijne dag gewenst!</p>
+    <p *ngIf="hour > 18">Goede avond!</p>
+</div>
+<div class="card">
+    <h2>Info:</h2>
+    <p>Naam in caps: {{naam | uppercase}}</p>
+    <p>Leeftijd: {{age}}</p>
+    <p>Geld: {{geld | currency:'EUR'}}</p>
+</div>

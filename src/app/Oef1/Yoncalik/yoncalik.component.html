@@ -1,0 +1,21 @@
+<table style="border: 2px solid blue;">
+
+<tr>KLOK : {{datum | date : "HH:mm:ss"}}</tr>
+<tr>DATUM : {{datum | date : "dd/MM/yy"}}</tr>
+
+
+</table>
+<div class="naam">
+<p>{{naam | uppercase}}</p>
+</div>
+
+<div class="teller">
+<p>{{teller}}</p>
+</div>
+
+<div class="procent">
+<p>DIT IS JE PERCENTAGE VOOR DIT OPDRACHT : {{procent | percent : '2.2'}}</p>
+</div>
+
+<h2><p>Deze legende is jarig op :  {{ birthday | date : format }}</p></h2>
+<button (click)="toggleFormat()">Toggle Format</button>

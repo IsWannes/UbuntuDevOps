@@ -1,0 +1,33 @@
+De Jonghe
+<div class="Everything">
+    <div>
+        <input type="button" [value]="Buttonstatus" (click)="ClickFunction()" (mouseover)="youSure()"
+            (mouseleave)="Reset()">
+        <p *ngIf="isButtonClicked">
+            <tr *ngFor="let item of ErrorList">
+                <td>{{item}}</td>
+                <th>{{item}}</th>
+                <td>{{item}}</td>
+                <th>{{item}}</th>
+                <td>{{item}}</td>
+                <th>{{item}}</th>
+                <td>{{item}}</td>
+                <th>{{item}}</th>
+                <td>{{item}}</td>
+                <th>{{item}}</th>
+                <td>{{item}}</td>
+                <th>{{item}}</th>
+                <td>{{item}}</td>
+            </tr>
+        </p>
+    </div>
+    <div>
+        <input #input type="text" placeholder = "Enter The type of input you want"> <br>
+        <input [type] ="input.value" [value] = "input.value" placeholder = "Enter The input you want">>
+
+    </div>
+    <div class ="rainbowdiv">
+        <h1 class ="rainbow" (mousemove) = "rainbow($event)" [style.color]="Style">RAINBOW SLIDER</h1>
+    </div>
+
+</div>

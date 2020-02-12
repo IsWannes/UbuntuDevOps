@@ -1,0 +1,14 @@
+<div id="wrapper">
+    <div id="container">
+        <h1>CEDRIC</h1>
+        <h1>VAN OPSTAL</h1>
+        <p>Hover to stop</p>
+    </div>
+</div>
+<div>
+    <p class="som">RANDOM SOM: {{Number1+' + '+ Number2+ ' = '+ Result}}</p>
+    <p class="klok">KLOK: {{datum | date : "mediumTime"}}</p>
+    <br>
+    <p class="geld">Amaury moet mij nog: {{geld | currency : 'EUR'}}</p>
+    <input type="button" value="Amaury moet mij nog meer geld" (click)="VerhoogGeld()">
+</div>

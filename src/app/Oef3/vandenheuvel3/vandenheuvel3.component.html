@@ -1,0 +1,10 @@
+<p>vandenheuvel3 works!</p>
+<p>Wil je leuke feitjes over verschillende getallen?</p>
+<p>Kies een getal, of laat leeg voor een random getal</p>
+<input [(ngModel)]="Number" placeholder="getal">
+<button (click)="GetFact">Krijg feitje</button>
+<div *ngIf="GottenFact">
+    <p>{{NumberGotten}}:{{NumberFact}}</p>
+</div>
+
+<!-- <app-vandenheuvel-child [Today]="today" [Day]="day" [Month]="month"></app-vandenheuvel-child> -->

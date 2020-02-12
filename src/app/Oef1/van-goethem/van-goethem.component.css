@@ -1,0 +1,13 @@
+div{
+    border: 5px ridge yellow;
+    background: white;
+}
+
+.naam{
+    font-size:24px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.counter{
+    color: red;
+}

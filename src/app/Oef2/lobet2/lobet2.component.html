@@ -1,0 +1,39 @@
+<div>
+      <input type="checkbox" id="checkboxnr" [(ngModel)]="ShowNumber" /> <span>Show Nr.</span> <!--property binding -->
+      <input type="checkbox" id="checkboxname" [(ngModel)]="ShowName" /> <span>Show Name</span><!--property binding -->
+      <input type="checkbox" id="checkboxtype1" [(ngModel)]="ShowType1" /> <span>Show Type1</span><!--property binding -->
+      <input type="checkbox" id="checkboxtype2" [(ngModel)]="ShowType2" /> <span>Show Type2</span><!--property binding -->
+    </div>
+    
+    <div class="pokemoncontainer">
+      <div class="pokemonleft">
+        <table>
+          <h3>Click Something</h3>
+          <tr>
+            <th *ngIf="ShowNumber">No.</th><!--*ngIf -->
+            <th *ngIf="ShowName">Name</th><!--*ngIf -->
+            <th *ngIf="ShowType1">Type1</th><!--*ngIf -->
+            <th *ngIf="ShowType2">Type2</th><!--*ngIf -->
+          </tr>
+          <tr *ngFor="let pokemon of pokemonlist" ng-mouseover="background-color:red"> <!--*ngFor # event -->
+            <td *ngIf="ShowNumber" (click)="GetPicture(pokemon.Number)">{{pokemon.Number}}</td> <!--*ngIf # event  # interpolation-->
+            <td *ngIf="ShowName" (click)="GetPicture(pokemon.Number)">{{pokemon.Naam}}</td><!--*ngIf # event  # interpolation-->
+            <td *ngIf="ShowType1" (click)="GetPicture(pokemon.Number)">{{pokemon.Type1}}</td><!--*ngIf # event  # interpolation-->
+            <td *ngIf="ShowType2" (click)="GetPicture(pokemon.Number)">{{pokemon.Type2}}</td><!--*ngIf # event  # interpolation-->
+          </tr>
+        </table>
+      </div>
+      <div class="pokemonright">
+        <div class="pokemonimgdiv">
+          <img *ngIf="imgsrc" class="pokemonimg" [src]="imgsrc"> <!--property binding -->
+        </div>
+      </div>
+    </div>
+    
+    <div>
+        <div id="colordiv" [class]="colorclass"> <!--property binding -->
+                <button (click)="setred()">Change background to red</button> <!--event -->
+                <button (click)="setblue()">Change background to blue</button> <!--event -->
+        </div>      
+          
+    </div>

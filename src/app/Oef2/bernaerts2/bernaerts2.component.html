@@ -1,0 +1,16 @@
+Bernaerts 
+<h1>Hallo</h1>
+<p *ngIf="IsMaDi">De week is nog maar net begonnen!</p>
+<p *ngIf="IsWo">Geen les vandaag!</p>
+<p *ngIf="IsDoVr">Nog even volhouden!</p>
+<p *ngIf="IsZaZo">Geniet van je weekend!</p>
+
+
+<div>
+    <button (click)="VoegToe()">Voeg leerkrachten aan de lijst toe!</button>
+</div>
+<div>
+    <ol>
+        <li *ngFor= "let name of _names">{{name}} geeft les aan 2ea2.</li>
+    </ol>
+</div>

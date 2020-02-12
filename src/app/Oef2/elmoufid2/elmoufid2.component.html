@@ -1,0 +1,69 @@
+<!-- <!DOCTYPE html>    in een component zit geen volledige HTML pagina !
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body> -->
+
+    <div class="box">
+
+        <h1>© El Moufid Mohamed</h1>
+        <p>___________________________________</p>
+        <h2>↓ WELKOM BIJ DE ↓</h2>
+        <div class="logoDiv" (mousemove)="CheckMovement($event)">
+            <img class="logo" [src]="AP_Image" alt="">
+        </div>
+        <h2>QUIZ V1 !!!</h2>
+
+        <h2 [innerText]="playerName"> </h2>
+        <p *ngIf="!playerName" class="userName">Geef je naam hier en klik ergens buiten</p>
+        <input #username type="text" value="" (change)=SetName(username.value)>
+
+    </div>
+
+    <div class="box">
+
+        <h3 class="MarkedText">BLIJF BEWEGEN MET DE MUIS OVER HET AP-LOGO EN DE QUIZ VRAAG ZAL VERANDEREN</h3>
+
+        <h2 [innerText]="allQuestions[randomQuestion].Title"></h2>
+
+        <form #myForm="ngForm" (submit)=CheckAntwoord(myForm) novalidate>
+
+            <input class="radio" id="1" type="radio" name="antw" value="1" ngModel required>
+            {{allQuestions[randomQuestion].Answer1}}<br>
+            <input class="radio" id="2" type="radio" name="antw" value="2" ngModel required>
+            {{allQuestions[randomQuestion].Answer2}}<br>
+
+            <input class="blackButton" type="submit" value="Controleer Antwoord">
+        </form>
+
+        <button class="blackButton" [textContent]="ResetButtonMessage" (click)=ResetQuiz()></button>
+
+    </div>
+
+    <div class="box">
+
+        <tr class="flex2">
+            <td>Vraag</td>
+            <td>Antwoord (hover on image)</td>
+        </tr>
+
+        <tr class="flex1" *ngFor="let result of allResults">
+            <td>{{result.Question}}</td>
+            <td>
+                <img class="ResultImage" *ngIf="result.State == 'juist'" src="../../../assets/images/GreenMark.png"
+                    alt="">
+                <img class="ResultImage" *ngIf="result.State == 'fout'" src="../../../assets/images/RedMark.png" alt="">
+            </td>
+        </tr>
+
+    </div>
+
+<!-- </body>
+
+</html> -->

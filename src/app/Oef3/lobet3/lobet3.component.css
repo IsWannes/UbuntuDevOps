@@ -1,0 +1,55 @@
+#picture {
+  cursor: pointer;
+}
+
+#child {
+  border: solid black 2px;
+  float: right;
+  width: 40%;
+  padding: 5px;
+}
+
+.pokemonteam {
+  float: left;
+  width: 60%;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#innertopleftdiv {
+  float: left;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.innertopleftcheckbox {
+  float: left;
+  clear: left;
+}
+
+.innertopleftlabel {
+  float: left;
+  clear: left;
+  width: 100px;
+}
+
+.innertopleftlabel>p {
+  float: left;
+}
+
+#innertoprightdiv {
+  float: right;
+}
+
+.innertoprightstuff {
+  float: right;
+  clear: right;
+}
+
+#middiv {
+  width: 100%;
+  content: "";
+  clear: both;
+  display: table;
+}

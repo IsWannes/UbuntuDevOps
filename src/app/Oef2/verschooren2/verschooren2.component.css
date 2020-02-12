@@ -1,0 +1,67 @@
+.Fiets{
+    color:rgb(19, 223, 19);
+}
+#tekstVerander{
+    color: brown;
+}
+.wrapper {
+	text-align: center;
+
+}
+.wrapper>h1 {
+    color: #fff;
+    font-size: 92px;
+    font-family: "ubuntu";
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(to right, #e72a3a 10%, #fff 50%, #5bdaff 60%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 1.5s linear infinite;
+    display: inline-block;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	background-color: #333641;
+	font-family: "ubuntu", Arial, sans-serif;
+	overflow-x: hidden;
+	display: grid;
+	place-items: center;
+}
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}
+.hoverBox{
+    background-color: #333641;
+    color: white;
+    font-size: 2em;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 16px;
+}

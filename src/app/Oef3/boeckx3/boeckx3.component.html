@@ -1,0 +1,7 @@
+<h2>{{txtKop}}</h2>
+<div>
+    <button (click)="GenerateRandomName(true); generatenamecountry=true">{{btnBelgium}}</button>
+    <button (click)="GenerateRandomName(true); generatenamecountry=false">{{btnGermany}}</button>
+</div>
+<br>
+<app-boeckx-child [ShowName]="generatenamecountry"></app-boeckx-child>

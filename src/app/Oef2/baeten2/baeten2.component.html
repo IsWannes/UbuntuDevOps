@@ -1,0 +1,63 @@
+Baeten
+<h1>You may not believe it, but there are buttons on this screen!</h1>
+<h3>Hover the button and you will see him. Click them in the right order to see the color appear!</h3>
+
+<div class="borderField" [ngStyle]="{ 'background-color': bgcl}" (mousemove)="ReadMouse($event)">
+        <div #in1 [className]="class_btn" style="grid-area: b2;"  [textContent]="arr[0]" (click)="HasClicked(arr[0], $event)"></div>  
+        <div #in2 [className]="class_btn" style="grid-area: b26;" [textContent]="arr[1]" (click)="HasClicked(arr[1], $event)"></div>  
+        <div #in3 [className]="class_btn" style="grid-area: b31;" [textContent]="arr[2]" (click)="HasClicked(arr[2], $event)"></div>  
+        <div #in4 [className]="class_btn" style="grid-area: b33;" [textContent]="arr[3]" (click)="HasClicked(arr[3], $event)"></div>  
+        <div #in5 [className]="class_btn" style="grid-area: b46;" [textContent]="arr[4]" (click)="HasClicked(arr[4], $event)"></div>  
+        <div #in6 [className]="class_btn" style="grid-area: b50;" [textContent]="arr[5]" (click)="HasClicked(arr[5], $event)"></div>  
+        <div #in7 [className]="class_btn" style="grid-area: b19;" [textContent]="arr[6]" (click)="HasClicked(arr[6], $event)"></div>  
+        <div #in8 [className]="class_btn" style="grid-area: b12;" [textContent]="arr[7]" (click)="HasClicked(arr[7], $event)"></div>  
+</div>
+
+<p>Go and catch them all!</p>
+
+<div class="flexHorizontal">
+
+    <h4>Clicked yet: </h4>
+
+    <ul *ngFor="let c of hasClicked; let i = index">
+        <li *ngIf="c == true">{{arr[i-1]}} / </li>
+    </ul>
+
+</div>
+
+
+<div class="flexHorizontal">
+
+    <h4>Has to click: </h4>
+
+    <ul *ngFor="let c of hasClicked; let i = index">
+        <li *ngIf="c == false">{{arr[i-1]}} / </li>
+    </ul>
+    
+</div>
+
+<p 
+(mouseover)="in1.className = andere() 
+&& in2.className = andere() 
+&& in3.className = andere() 
+&& in4.className = andere() 
+&& in5.className = andere() 
+&& in6.className = andere() 
+&& in7.className = andere() 
+&& in8.className = andere()"
+(mouseleave)="in1.className = class_btn 
+&& in2.className = class_btn
+&& in3.className = class_btn
+&& in4.className = class_btn
+&& in5.className = class_btn
+&& in6.className = class_btn
+&& in7.className = class_btn
+&& in8.className = class_btn">Hover me to see solution or <a (click)="Reset()">click to reset</a></p>
+
+<h3>Mouse at: {{mouseX}} x {{mouseY}}</h3>
+<h3>Last founded box: {{LastmouseX}} x {{LastmouseY}}</h3>
+    
+
+
+
+ 

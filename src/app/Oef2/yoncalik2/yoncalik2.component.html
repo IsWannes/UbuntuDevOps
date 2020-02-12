@@ -1,0 +1,159 @@
+<div class="leerlingnaam">
+    ARAFA YONCALIK
+</div>
+
+<p></p>
+
+HOVER MUIS OVER EN UIT DE VIDEO OM AF TE SPELEN EN TE PAUZEREN.
+
+<div class="project-container">
+    <video #player width="700px" class="content" controls loop (mouseover)="player.play()" (mouseout)="player.pause();">
+        <source src="../../../assets/images/memes.mp4">
+    </video>
+</div>
+
+
+<div>
+    <h2> USERNAME : </h2>
+
+    <div class="row">
+        <div class="col-xs-6 col-md-4">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="username" [(ngModel)]="username" required
+                    style="text-align: center;" [(ngModel)]="task" />
+                <div class="input-group-btn">
+                    <button class="btn" type="button" [textContent]="knoptitel" (click)="onClick()">
+                        <span class="glyphicon glyphicon-ok"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <ul class="list-group">
+        <li *ngFor="let task of tasks" class="list-group-item">
+            <span> {{ task.name }} </span>
+        </li>
+    </ul>
+
+</div>
+
+
+<hr class="hr2" width="80%">
+
+<div class="welkom">
+        <!-- username bestaat niet ? -->
+    <h1><b><u>WELKOM BEZOEKER {{username | uppercase}}</u></b></h1>  
+</div>
+
+<div class="rekenmachine">
+    <h1>REKENMACHINE</h1>
+    <div>
+        <input class="result" type="text" readonly value="{{result}}">
+    </div>
+
+
+    <div>
+
+        <button class="responsive long" *ngFor="let longButton of longButtons" (click)="addToExpression(longButton)">
+            {{longButton}}
+        </button>
+
+
+        <button class="responsive" *ngFor="let button of buttons" (click)="addToExpression(button)">
+            {{button}}
+        </button>
+
+
+    </div>
+</div>
+<p></p>
+
+
+
+<div class="hiddenCode">
+
+    <table border="2" bordercolor="black">
+        <tr>
+            <td>
+
+                <b><u>SPELLETJE</u></b>
+                <p>
+                    ZORG ER ZELF VOOR IN DE REKENMACHINE DAT JE DE VOLGENDE UITKOMSTEN BEKOMT EN JE ZULT VERRAST WORDEN
+                    :
+                    <p>
+                        1830<br>
+                        1492<br>
+                        1999
+
+                        <p *ngIf="show">
+                            ONAFHANKELIJKHEID VAN BELGIE<br>
+                            <img [src]="img1URL" width="400px" height="400px">
+                        </p>
+
+                        <p *ngIf="show2">COLUMBUS ONTDEKT AMERIKA<br>
+                            <img [src]="img2URL" width="400px" height="400px">
+                        </p>
+
+                        <p *ngIf="show3">GEBOORTE JAAR VAN DE SLIMSTE STUDENT VAN AP : YONCALIK ARAFA
+
+                            <img [src]="img3URL" width="400px" height="400px">
+
+                        </p>
+            </td>
+        </tr>
+    </table>
+</div>
+<p></p>
+
+<hr>
+
+<button class="enable" *ngIf="!buttonDisabled" (click)="buttonDisabled=true">Fibonacci Enabled</button>
+<button class="disable" *ngIf="buttonDisabled" (click)="buttonDisabled=false">Fibonacci Disabled</button>
+<p></p>
+<button class="fibonacci" [disabled]="buttonDisabled" (click)="i = i+1">Fibonacci</button>
+<p></p>
+
+<div class="fib">
+    {{calculate(i)}}
+</div>
+
+<hr class="hr2">
+
+<div class="textGrootte">
+    KIES JE SPELER
+</div>
+<p></p>
+<select #leerling>
+    <option value="Arafa Yoncalik">Arafa Yoncalik</option>
+    <option value="Amir Abrar">Amir Abrar</option>
+</select>
+
+<p></p>
+
+<div *ngIf="leerling.value == 'Amir Abrar'" (mouseover)="leerlingWissel=true" (mouseout)="leerlingWissel=false">
+    <img *ngIf="!leerlingWissel" class="Amir" [src]="imgArr[0]" width="400px" height="500px">
+    <img *ngIf="leerlingWissel" class="Amir" [src]="imgArr[1]" width="400px" height="500px">
+</div>
+
+<div *ngIf="leerling.value == 'Arafa Yoncalik'" (mouseover)="leerlingWissel=true" (mouseout)="leerlingWissel=false">
+    <img *ngIf="!leerlingWissel" class="Amir" [src]="imgArr[0]" width="400px" height="500px">
+    <img *ngIf="leerlingWissel" class="Amir" [src]="imgArr[2]" width="400px" height="500px">
+</div>
+
+
+<p></p>
+
+<button class="k" (click)="EvenTeller($event)" [(textContent)]="evenText"></button><br>
+
+<div class="textGrootte">
+    {{even}}
+</div>
+<p></p>
+<button class="k" (click)="OnEvenTeller($event)" [(textContent)]="onevenText"></button><br>
+<div class="textGrootte">
+    {{oneven}}
+</div>
+<p></p>

@@ -1,0 +1,53 @@
+button {
+    margin: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 10px;
+    display: inline-block;
+    width: auto;
+}
+
+p {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.flex-container button {
+    flex-basis: 33%;
+}
+
+.flex-container2 button {
+    flex-basis: 50%;
+}
+
+.flex-container input {
+    height: 10px;
+    max-lines: 1;
+}
+
+.flex-container p {
+    flex-basis: 50%;
+}
+
+.flex-container button:hover, button:hover {
+    background-color: red;
+}
+
+.flex-container, .flex-container2 {
+    display: flex;
+    width: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.SelectedButton {
+    background-color: red;
+}
+
+.NotSelected {
+    background-color: black;
+}

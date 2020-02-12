@@ -1,0 +1,19 @@
+<div class="main" (wheel)="ChangeColor()" [style.color]="color">
+    <h4>Elias Tobback</h4>
+    <button #in1 value="Click in de doos!" [disabled]="buttonState" (click)="ShowText(in1.value)">Klik</button>
+    <p [textContent]="text"></p>
+    <hr>
+    <div class="window" (click)="AddClick($event)"></div>
+    <hr>
+    <table *ngIf="clicks.length != 0">
+        <tr>
+            <th>X</th>
+            <th>Y</th>
+        </tr>
+        <tr *ngFor="let item of clicks; let i = index">
+            <td>{{item.X}}</td>
+            <td>{{item.Y}}</td>
+            <br>
+        </tr>
+    </table>
+</div>

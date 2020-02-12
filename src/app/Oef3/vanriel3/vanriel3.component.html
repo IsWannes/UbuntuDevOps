@@ -1,0 +1,11 @@
+<p>Hoeveel vragen wenst u te verkrijgen?</p>
+<br>
+<input type="number" size="30" maxlength="26" [(ngModel)]="amount" placeholder="Hoeveel vragen wil je?"/>
+<hr>
+<app-vanriel-child [aantalVragen]="requestedAmount"></app-vanriel-child>
+<hr>
+<div>
+    <p>a free short joke as a bonus:</p>
+    <p *ngIf = "joke != null" >{{joke}}</p>
+    <p *ngIf = "punchline != null">{{punchline}}</p>
+</div>

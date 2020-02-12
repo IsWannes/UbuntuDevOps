@@ -1,0 +1,19 @@
+Broos 
+<h1>Key Generator</h1>
+<p>Geef sleutel</p>
+
+<input #Naam type="text">
+
+<button (click)="GenerateKey(Naam.value, $event)">Generate key</button>
+<button (click)="Show()">Show numbers</button>
+
+<div *ngIf="showkey; then thenBlock;"></div>
+
+<ng-template #thenBlock> 
+    <div *ngFor="let key of keys">
+        <div>{{key}}</div>
+    </div>
+</ng-template>
+
+
+<p>{{Key}}</p>

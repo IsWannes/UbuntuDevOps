@@ -1,0 +1,12 @@
+<button *ngIf="aantal == 1" (click)="GenereerVragen()">Genereer {{aantal}} vraag</button>
+<button *ngIf="aantal > 1" (click)="GenereerVragen()">Genereer {{aantal}} vragen</button>
+
+<div *ngFor="let vraag of vragen">
+    <hr style="border-top: dotted 2px;"/>
+    <p [innerHTML]="vraag.question"></p>
+    <p>Difficulty: {{vraag.difficulty}}</p>
+    <p style="color:rgb(0, 255, 0)">{{vraag.correct_answer}}</p>
+    <div *ngFor="let fout of vraag.incorrect_answers">
+        <p style="color: red;" [innerHTML]="fout"></p>
+    </div>
+</div>

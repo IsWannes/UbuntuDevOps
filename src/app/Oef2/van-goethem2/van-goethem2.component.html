@@ -1,0 +1,36 @@
+Van Goethem 
+<div class="InfoArtiest">
+    <p>Geef hieronder meer informatie over je favoriete artiest(en) om deze in de lijst toe te voegen : </p>
+    <input #_naam type="text" placeholder="Naam" [(ngModel)]="Naam"><br>
+    <input #_geboortedatum type="date" [(ngModel)]="Geboortedatum"><br>
+    <input #_woonplaats type="text" placeholder="Woonplaats" [(ngModel)]="Woonplaats"><br>
+    <input #_liedje type="text" placeholder="Bekenste liedje" [(ngModel)]="Liedje"><br>
+    <button [textContent]="Verzenden"
+        (click)="InfoVerstuurd(_naam.value, _geboortedatum.value, _woonplaats.value, _liedje.value)"></button>
+
+    <div class="LijstArtiesten">
+        <p>Hierbij de lijst met informatie van jouw favoriete artiest(en) :</p>
+        <table *ngIf="InformatieBeschikbaar" (mouseover)="MuisOverTabel($event)" (mouseout)="OmgekeerdeVolgorde=false">
+            <tr *ngIf="!OmgekeerdeVolgorde">
+                <th>Naam artiest</th>
+                <th>Geboortedatum</th>
+                <th>Woonplaats</th>
+                <th>Bekenste liedje</th>
+            </tr>
+            <tr *ngIf="OmgekeerdeVolgorde">
+                <th>Bekenste liedje</th>
+                <th>Woonplaats</th>
+                <th>Geboortedatum</th>
+                <th>Naam artiest</th>
+            </tr>
+            <tr *ngFor="let a of Artiesten">
+                <td>{{a.Naam}}</td>
+                <td>{{a.Geboortedatum}}</td>
+                <td>{{a.Woonplaats}}</td>
+                <td>{{a.Liedje }}</td>
+            </tr>
+        </table>
+        <p>Hover over de tabel voor een epic vertoning van de informatie</p>
+    </div>
+    <p>Je hebt al {{teller}} keer met je muis over de tabel bewogen</p>
+</div>

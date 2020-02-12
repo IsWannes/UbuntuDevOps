@@ -1,0 +1,49 @@
+<body class="input">
+    <app-vanopstal-child [ParentString]="ParentString"></app-vanopstal-child>
+</body>
+<div class="bitcoinField">
+    <button (click)="DoSearch()">Get Bitcoin info</button>
+    <div *ngIf="BitcoinInfo">
+        <h3>De waarde van 1 BTC (BITCOIN)</h3>
+        <ul>
+            <li><h4>{{BitcoinInfo.usdCode}} {{BitcoinInfo.usdDescription}}</h4></li>
+            <li><h5>&#36; {{BitcoinInfo.usdRate}}</h5></li>
+            <li><h4>{{BitcoinInfo.gbpCode}} {{BitcoinInfo.gbpDescription}}</h4></li>
+            <li><h5>&pound; {{BitcoinInfo.gbpRate}}</h5></li>
+            <li><h4>{{BitcoinInfo.eurCode}} {{BitcoinInfo.eurDescription}}</h4></li>
+            <li><h5>&euro; {{BitcoinInfo.eurRate}}</h5></li>
+        </ul>
+    </div>
+</div>
+<div class="Tool">
+    <h1>Dit is mede mogelijk gemaakt door: Amaury Verschooren</h1>
+        <div class="InputField">
+             <input [(ngModel)]="city" placeholder="Typ hier je stad"><br>
+            <select [(ngModel)]="State">
+                <option value="Flanders">Vlaanderen</option>
+                <option value="Brussels Capital">Brussel Hoofdstedelijk Gewest</option>
+                <option value="Wallonia">Wallonië</option>
+            </select><br>
+            <button (click)="DoSearch2(city, State)">Search</button>
+        </div>
+        <div class="InfoField"> 
+            <div class="StaticInfo">
+                <div class="StaticItem">Land:</div>
+                <div class="StaticItem">Provincie:</div>
+                <div class="StaticItem">Stad:</div>
+                <div class="StaticItem">Temperatuur:</div>
+                <div class="StaticItem">Vochtigheidsgraad:</div>
+                <div class="StaticItem">Druk:</div>
+                <div class="StaticItem">Luchtkwaliteitsindex:</div>
+            </div>
+            <div class="DynamicInfo" *ngIf="AirInfo">
+                <div class="DynamicItem">{{AirInfo.country}}</div>
+                <div class="DynamicItem">{{AirInfo.state}}</div>
+                <div class="DynamicItem">{{AirInfo.city}}</div>
+                <div class="DynamicItem">{{AirInfo.temperature}} °C</div>
+                <div class="DynamicItem">{{AirInfo.humidity}} %</div>
+                <div class="DynamicItem">{{AirInfo.presure}} mb</div>
+                <div class="DynamicItem">{{AirInfo.aqius}} US AQI</div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,57 @@
+
+<!-- 
+<div *ngIf="score">
+    <div>Het resultaat is van de test is: {{score}} / {{maxScore}}</div>
+    <div *ngIf="score < 4">Dit resultaat is ondermaats</div>
+    <div *ngIf="score > 7">Mooie score !”</div> -->
+
+    <!-- Alternatief met 'methods' op de klasse -->
+    <!-- <div *ngIf="BadScore()">Dit resultaat is ondermaats</div>
+    <div *ngIf="GoodScore()">Mooie score !”</div>  -->
+
+    <!-- Maak een flowchart??? -->
+<!-- </div> -->
+
+
+
+
+<!-- hover event (mouseenter en mouseleave) -->
+<H1 (mouseenter)="DisplayNameBackwards()" (mouseleave)="DisplayNameForwards()">Hover here => {{name}}</H1>
+
+<br>
+
+<!-- $event -->
+<input (keyup)="onKey($event)">
+  <p>{{values}}</p>
+
+  <input #box (keyup)="0">
+    <p>{{box.value}}</p>
+
+<br>
+
+<!-- String equal checker -->
+<h1>Check if strings are equal</h1>
+<input type="text" [(ngModel)]="textValue1"> <!-- Propertie binding -->
+<input type="text" [(ngModel)]="textValue2"> <!-- Propertie binding -->
+<p *ngIf="textValue1 === textValue2">Strings are equal!</p> <!--  -->
+<p *ngIf="checkString()">Strings are equal!</p>             <!--  -->
+
+<br><br>
+
+<!-- Ngfor -->
+<table border="1">
+        <tr *ngFor="let auto of autos">  <!-- foreach auto in autos | NgFor-->
+          <th border:2px solid black>{{ auto }}</th>
+        </tr>
+</table>
+
+<br>
+<!-- Random auto -->
+<input type="submit" value="Random race auto" (click)="randomAuto()"> <!-- Click event -->
+<br>
+<img [src]="AutoURL" width="600px" height="400px"> <!-- property binding  -->
+
+
+
+
+

@@ -1,0 +1,27 @@
+<div class="mainDiv">
+    <h1>Matisse Faes</h1>
+    <input type="button" [value]="buttonValue" (mouseover)="changeButton()" (mouseleave)="changeButton()"
+        (click)="buttonClick()">
+    <div (mousemove)="emojiShy($event)" *ngIf="buttonClicked" class="imgDiv">
+        <h1>{{mousePosX}}</h1>
+        <img [src]="imgUrl">
+    </div>
+    <div class="addAnime">
+        <h2>Add Your Favourite Anime Below!</h2>
+        <input #title type="text" [(ngModel)]="titleNg" placeholder="Title*"><br>
+        <input #studio type="text" [(ngModel)]="studioNg" placeholder="Studio*"><br>
+        <input #genre type="text" [(ngModel)]="genrenG" placeholder="Genre*"><br>
+        <button [textContent]="animeButtonValue" (click)="newAnime(title.value, studio.value, genre.value)"></button>
+        <br>
+    </div>
+    <div class="animeCheck">
+        <ol>
+            <li><b>Title: {{titleNg}}<br>Studio: {{studioNg}}<br>Genre: {{genrenG}}</b></li>
+        </ol>
+    </div>
+    <div>
+        <ol *ngFor="let a of anime">
+            <li><b>Title: {{a.title}}<br>Studio: {{a.studio}}<br>Genre: {{a.genre}}</b></li>
+        </ol>
+    </div>
+</div>

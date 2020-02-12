@@ -1,0 +1,10 @@
+<div class="groteblok">
+    <p>{{GetFullName() | uppercase }}</p>                                               <!-- interpolation (1e) en pipeline(1e) -->
+    <h1>{{datum | date:'medium'}}</h1>                                                  <!-- pipeline (2e) -->
+    <button (click)="IncreaseValue()">Verhoog prijs</button>                            <!-- interpolation (2e) -->
+    <p>{{"Met die Atletiekwedstrijd win je: "}}+{{value| currency:'EUR'}}</p>             <!-- pipline (3e) -->
+</div>
+
+<div class="blokje">Hier is een random waarde: <strong>{{random}}</strong>
+    <h1><i innerText={{lastname}}></i></h1>                                                     <!-- interpolation (3e) -->
+</div>

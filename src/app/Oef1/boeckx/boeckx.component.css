@@ -1,0 +1,20 @@
+.blokje{
+    background-color: brown;
+    border:4px;
+    border-style: solid;
+    margin-top: 10pt;
+    border-color: darkviolet; 
+}
+
+.groteblok{
+    background-color: darkgoldenrod;
+    border: 8px;
+    border-style: dotted;
+    border-color: wheat;
+    border-radius: 10%;
+}
+
+button{
+    border-radius: 10%;
+    background-color: white;
+}

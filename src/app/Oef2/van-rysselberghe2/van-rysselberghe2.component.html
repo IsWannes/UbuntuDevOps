@@ -1,0 +1,25 @@
+<div (keydown)="keyEvent($event)">
+    <p>Geef een maand in:</p>
+    <input type="text" #maand><button (click)="GetMaand(maand)">Bevestig</button>
+    <div class="rand"><input type="image" class="navigatie" [src]="buttonLeftImage"
+            (click)="VerlaagMaand()"><label>{{maanden[teller]}}</label><input type="image" class="navigatie"
+            [src]="buttonRightImage" (click)="VerhoogMaand()"></div>
+    <div *ngIf="oneven">
+        <ul class="days">
+            <li *ngFor="let dag of onevenDagen" #day value="{{dag}}" (click)="GetDag(day.value)">{{dag}}</li>
+        </ul>
+    </div>
+    <div *ngIf="even">
+        <ul class="days">
+            <li *ngFor="let dag of evenDagen" #day value="{{dag}}" (click)="GetDag(day.value)">{{dag}}</li>
+        </ul>
+    </div>
+    <div *ngIf="feb">
+        <ul class="days">
+            <li *ngFor="let dag of febDagen" #day value="{{dag}}" (click)="GetDag(day.value)">{{dag}}</li>
+        </ul>
+    </div>
+    <p class="rand" [style.font-weight]="textStyle" [hidden]="hideDag">Je koos {{gekozenDag}}</p>
+    <p>Je kan ook de maanden veranderen met je pijltjes</p>
+    <p>Gemaakt door Lennert Van Rysselberghe</p>
+</div>

@@ -1,0 +1,47 @@
+.field{
+    margin: 2pt;
+    border-radius: 5%;
+    background-color: #b3d9ff;
+    border-color: #0066ff;
+    height: 25pt;
+    text-align: center;
+    border-width: 3pt;
+}
+
+.jan{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+
+.kompas{
+    margin: 50pt;
+    margin-bottom: 5pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+.doorgeefknop{
+    background-color: black;
+    border-color: black;
+    height: 30pt;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.arrow{
+    width: 50pt;
+    height: 50pt;
+    font-size: 50px;
+}
+
+button:hover{
+    animation-name: background-color;
+    animation-duration: 5000ms;
+    }
+    
+    @keyframes background-color {
+    100% {
+    background-color:#4065F3;
+    }
+}

@@ -1,0 +1,28 @@
+.abrarChildDiv {font-size: 40p; font-weight: bold;border-style: ridge;font-family: monospace;margin: 0 auto;position: relative;text-align: center;}
+
+.jaarDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.mathDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.triviaDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.dateDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.passwordDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.showDetailsDiv {border-style: ridge;height: 100%; width: 650px;display: inline-block;vertical-align: middle;padding: 15px;margin-bottom: 30px;}
+
+.arrowSmallToRight {color:gold;}
+
+.generatedPasswordH3 {font-size: 20px;font-weight: bold;}
+
+.arrowToLeft {font-size: 50px;color: gold;}
+
+.arrowToRight {font-size: 50px;color: gold;}
+
+.passwordButton {padding: 5px;}
+
+.aaa{display: inline-block;vertical-align: middle;}
+
+.ui-g-12 {display: inline-block;vertical-align: middle;text-align: left;}
+

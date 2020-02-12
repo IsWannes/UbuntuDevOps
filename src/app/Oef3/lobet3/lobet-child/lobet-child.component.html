@@ -1,0 +1,23 @@
+<div class="giveborder">
+  <h3>Child Component</h3>
+  <table class="giveborder" style="float: left;" *ngIf="childpokemon">
+    <tr>
+      <th>Name: </th>
+      <td>{{childpokemon.name}}</td>
+    </tr>
+    <tr *ngFor="let stats of childpokemon.stats">
+      <th>{{stats.stat.name}}:</th>
+      <td>{{stats.base_stat}}</td>
+    </tr>
+    <tr>
+      <th>Weigth:</th>
+      <td>{{childpokemon.weight}}</td>
+    </tr>
+    <tr>
+      <th>Shinyform</th>
+    </tr>
+    <tr>
+      <td><img src="{{childpokemon.sprites.front_shiny}}"></td>
+    </tr>
+  </table>
+</div>

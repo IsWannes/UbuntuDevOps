@@ -1,0 +1,25 @@
+<div class="box">
+
+    <h1>{{Name| titlecase}}</h1>
+
+    <h2 innerText={{Title1}}></h2>
+
+    <div class="flexHorizontal">
+        <p style="font-weight: bold;">My Guess:</p>
+        <p>&nbsp;</p>
+        <input #in1 type="text" placeholder="{{getHintNr()}}">
+        <button  (click)="setNumber(in1.value)" >{{buttonGuess | uppercase}}</button>
+    </div>
+
+   
+
+    <div class="flexHorizontal">
+            <p class="P_result">{{getSmileyStatus()}}</p>
+            <p class="P_result">{{getNumberStatus()}}</p>
+            <p class="P_result">{{getSmileyStatus()}}</p> 
+    </div>
+
+    <p>Last guessed at: {{getDate() | date: 'HH:mm:ss'}}</p>
+    
+
+</div>

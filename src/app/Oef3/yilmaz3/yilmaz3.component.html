@@ -1,0 +1,17 @@
+<br>
+
+
+<h2>Geef een zin en wij raden van welke taal het is ! </h2>
+
+<br>
+<textarea #plek [rows]="5" [cols]="30" pInputTextarea autoResize="false"></textarea>
+<br>
+<button  pButton type="button" label="Send" (click)="NiewMethode(plek.value)" ></button>
+<br>
+
+<!--[(location)] ="Stad" <div>{{Stad}} <input #plek pInputText > </div>-->
+
+
+<br>
+<app-yilmaz-child [(location)] = "input"></app-yilmaz-child>
+

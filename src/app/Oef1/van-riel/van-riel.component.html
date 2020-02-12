@@ -1,0 +1,14 @@
+<h1>{{person.name}} {{person.lastName}}</h1>
+
+<p>{{currentTime | date: 'dd-MMM-yyyy'}}</p>
+<p>{{currentTime | date: 'HH:mm:ss'}}</p>
+<p *ngIf="currenthour < 10">goede morgen!</p>
+<p *ngIf="currenthour >= 18">goede avond!</p>
+
+<button (click)="generateNumber()">Random number</button>
+<p *ngIf="randomValue != null">{{randomValue}}</p>
+<button *ngIf="randomValue != null" (click)="addCredit()">Add to account</button>
+
+<h3>Bank info: </h3>
+<p>owner: {{account.owner.name}}</p>
+<p>credit: {{account.credit | currency:'EUR'}}</p>

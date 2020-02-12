@@ -1,0 +1,32 @@
+.InfoArtiest{
+    padding-bottom : 10px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.LijstArtiesten{
+    border: 2px solid red;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+table{
+    border: 1px solid black;
+    position: relative;
+    left: 25%;
+    width: 50%;
+    margin: 20px;
+}
+
+button{
+    width: 125px;
+    height: 25px;
+    margin-top: 10px;
+}
+
+
+

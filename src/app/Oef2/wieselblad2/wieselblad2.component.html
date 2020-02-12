@@ -1,0 +1,41 @@
+<p *ngIf="begin != true" [textContent]="me"></p>
+
+<button *ngIf="begin!=true"(click)="begin=true">add complaint</button>
+ 
+<table *ngIf="begin == true">
+    <tr>
+        <th> <h3>naam</h3> </th>
+        <th> <input required #_naam type="text" [(ngModel)]="naam" placeholder="naam"></th>
+    </tr>
+    <tr>
+<th> <h3>voornaam </h3> </th>
+<th> <input required #_voornaam type="text" [(ngModel)]="voornaam" placeholder="voornaam"></th>
+</tr>
+<tr>
+<th> <h3>klacht</h3> </th>
+<th> <input required #_klacht type="text" [(ngModel)]="klacht" placeholder="klacht"></th>
+</tr>
+</table>
+
+<table>
+        <tr>
+            <th>{{naam}}  {{voornaam}}</th> 
+            <br>     
+            <th>{{klacht}}</th>   
+        </tr>
+</table>
+
+<button *ngIf="begin == true" (click)="addComplaint(naam,voornaam,klacht)">Submit</button>
+<button *ngIf="begin== true" disabled="true" [textContent]="comits"></button>   
+
+
+
+<table>
+        <tr *ngFor="let complaint of complaints">
+            <th>{{complaint.naam}}   {{complaint.voornaam}}</th>
+            <td>{{complaint.klacht}}</td>   
+        </tr>
+</table>
+
+<button [textContent]="tekst" (click)="changeTekst()"></button>
+

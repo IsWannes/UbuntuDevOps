@@ -1,0 +1,5 @@
+<div><p>{{naam | titlecase}}</p>
+<p>Voornaam: {{naam | slice:0:7}}</p></div>
+<p>Datum: {{datum | date : 'EEEE, MMMM d, y'}}</p>
+<p>Button klik percentage: {{slaagkans | percent}}</p>
+<button class="troll" (mouseover)="RandomPositie()" (click)="Geklikt()" [style.left]="xPos" [style.top]="yPos">{{teller | number: '2.'}}</button>

@@ -1,0 +1,42 @@
+
+<div class="Name">
+<h1>Kerem Yilmaz</h1>
+</div>
+
+<div class="Grid">
+
+
+        <div class="Item">
+
+            <div>Datum en tijd huidige locatie : {{Tijd | date : TimeFormat  }}</div>
+            <div>Datum en tijd in London : {{EngTijd}}</div>
+            <div>Datum en tijd in Silicon Valley : {{UsTijd}}</div>
+            <div>Datum en tijd in Hong Kong : {{ChinaTijd}}</div>
+        
+
+        </div>
+
+    <div class="Item">
+        Willekeurige foto
+        <br>
+        <div class="Foto">
+        <img src="https://picsum.photos/id/{{FotoNummer}}/120/120" alt="">
+        </div>
+        {{FotoNummer}}
+    </div>
+    <div class="Item">
+        
+            <input (keyup) = "InputWaarde($event)">
+            <br>
+            <p *ngIf = "Letter">{{InputText | lowercase}}</p>
+            <p *ngIf = "!Letter">{{InputText | uppercase}}</p>
+            
+        <button (click)="CaseChange()">Verander Letter</button>
+        <button (click)="Savechanges()" >Submit</button> 
+
+
+    </div>
+
+    
+</div>
+

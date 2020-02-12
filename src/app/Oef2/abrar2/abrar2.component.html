@@ -1,0 +1,84 @@
+<div class="grid-container2">
+    <div class="grid-item">
+        <!-----------------Property Binding, Event Binding, *ngIf, *ngFor, $event Parameter------------------------------------>
+        <div class="header" (mouseover)="changeImg=true" (mouseout)="changeImg=false" (mousemove)="getFullName($event)">
+            <div *ngIf="!changeImg" class="whoami">Who Am I ??? <br>H.O.V.E.R | M.E </div>
+            <div *ngIf="changeImg" class="naam">{{getFullName()}}</div>
+        </div>
+        <br>
+        <h2><b>Click the dollar to charge your balance:</b></h2>
+        <button (click)="Increment($event)"><img [src]="arrayImages[0]" class="dollar" /></button>
+        <h1 class="money"><span id="add">{{count | currency}}</span></h1>
+        <div class="list">
+            <!---------------*ngFor-------------->
+            <ol *ngFor="let n of footballPlayers">
+                <li><b>{{n.Players}}<br>{{n.Teams}}<br>{{n.Numbers}}<br>{{n.Price | currency:0 }}</b></li>
+            </ol>
+        </div>
+    </div>
+    <br>
+    <div class="voegToe">
+        <h2>Add your customized player:</h2>
+        <input #_naamSpeler type="text" [(ngModel)]="naamSpeler" placeholder="Naam*" required><br>
+        <input #_team type="text" [(ngModel)]="Team" placeholder="Team*" required><br>
+        <input #_nummer type="text" [(ngModel)]="Nummer" placeholder="Nummer*" required="true"><br>
+        <input #_prijs type="text" [(ngModel)]="Prijs" placeholder="Markt Prijs*" required><br>
+        <button [textContent]="text" (click)="Player(_naamSpeler.value, _team.value, _nummer.value, _prijs.value)" class="knop" required></button>
+        <br><br>
+    </div>
+    <br>
+    <div class="list">
+        <ol>
+            <li><b>{{naamSpeler}}<br>{{Team}}<br>{{Nummer}}<br>{{Prijs | currency}}</b></li>
+        </ol>
+    </div>
+    <!-- <h1>...UNDER CONSTRUCTION...<br>...LOADING SOON...</h1>
+    <div class="danger"><h1>DANGER DON'T CLICK !!!</h1></div> -->
+    <div class="neon">
+            <span class="text" data-text="thanks">HOVER PLAYER</span>
+            <span class="gradient"></span>
+            <span class="spotlight"></span>
+    </div>
+        <div class="spelers">
+            <h2>Choose Your Favourite Player To See: <br>{{naam}}</h2>
+            <select #nm [(ngModel)]="naam">
+                <option selected value="Lionel Messi">Messi</option>
+                <option selected value="Antoine Griezmann">Griezmann</option>
+                <option selected value="Neymar Junior">Neymar</option>
+            </select>
+            <br><br>
+            <div class="hover">
+                <div *ngIf="nm.value=='Lionel Messi'" (mouseover)="changeImg=true" (mouseout)="changeImg=false">
+                    <img *ngIf="!changeImg" class="messi" [src]="arrayImages[1]" />
+                    <img *ngIf="changeImg" class="messi" [src]="arrayImages[2]" />
+                </div>
+                <div *ngIf="nm.value=='Antoine Griezmann'" (mouseover)="changeImg=true" (mouseout)="changeImg=false">
+                    <img *ngIf="!changeImg" class="griezmann" [src]="arrayImages[3]" />
+                    <img *ngIf="changeImg" class="griezmann2" [src]="arrayImages[4]" />
+                </div>
+                <div *ngIf="nm.value=='Neymar Junior'" (mouseover)="changeImg=true" (mouseout)="changeImg=false">
+                    <img *ngIf="!changeImg" class="neymar" [src]="arrayImages[5]" />
+                    <img *ngIf="changeImg" class="neymar2" [src]="arrayImages[6]" />
+                </div>
+            </div>
+        </div>
+        <div class="neon">
+            <span class="text" data-text="thanks">ALERT</span>
+            <span class="gradient"></span>
+            <span class="spotlight"></span>
+        </div>
+        <div class="spelers">
+        </div>
+        <br>
+    <div class="keepOut">
+        <br>
+        <img [src]="arrayImages[8]" class="warning">
+        &nbsp;<button (click)="clickImg=true">WARNING !!! DONT CLICK !!! DANGER </button>&nbsp;
+        <img [src]="arrayImages[9]" class="warning">
+        <h1 *ngIf="clickImg == true" [textContent]="">TOLD YOU NOOOOOB !!!</h1>
+        <img class="danger" *ngIf="clickImg == true" [src]="arrayImages[7]"/>
+        <br>
+    </div>
+    <br><br>
+    <h2><input type="checkbox" #n value="Jij Bent Tof ;)" (click)="check=true" class="tof">TOFFE SHIT</h2>
+    <h1 *ngIf="check== true" >{{n.value}}</h1>

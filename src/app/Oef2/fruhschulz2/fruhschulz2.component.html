@@ -1,0 +1,57 @@
+<h1>Fruhschulz Claency Oef 2</h1>
+
+<p>List of Superheroes</p>
+
+<table>
+<thead><th>Name</th>
+<th>Attack</th>
+<th>Strength</th></thead>
+<tr *ngFor="let hero of heroes; let i = index">
+    <td>{{hero.name}}</td>
+    <td>{{hero.attack}}</td>
+    <td>{{hero.defence}}</td>
+</tr>
+</table>
+
+<br>
+
+
+
+<br>
+<br>
+
+<p>List of Villains</p>
+<table>
+    <thead><th>Name</th>
+    <th>Attack</th>
+    <th>Strength</th></thead>
+    <tr *ngFor="let villain of villains; let i = index">
+        <td>{{villain.name}}</td>
+        <td>{{villain.attack}}</td>
+        <td>{{villain.defence}}</td>
+    </tr>
+    </table>
+    <br>
+    <button [disabled]="statusHeroConfirmButton" (click)="OnClickHero()">Click me!</button>
+    <button  [disabled]="statusVillainConfirmButton" (click)="OnClickVillain()">Click me too!</button>
+
+<br>
+<br>
+
+<label (mouseDown)="PressedHiddenLabel($event)">{{labelHiddenButton}}</label>
+<br>
+<button  *ngIf="statusHeroConfirmButton==true && statusVillainConfirmButton ==true" (click)="StartNextModule($event)" >{{hiddenButtonText}}</button>
+<br>
+<div (mouseenter)="ChangeLinkAdress()">
+<a [href]="linkDestination" [hidden]="linkStatus" >{{linkDestination}}</a>
+</div>
+<br>
+<div [hidden]="inputStatus">
+<label>Change the following label in a text to your choosing: </label>
+<br>
+<input #inp type="text" value="Test">
+<br>
+<label>{{inputLabelText}}</label>
+<br>
+<button (click)="ChangeLabelText(inp.value)">Confirm</button>
+</div>

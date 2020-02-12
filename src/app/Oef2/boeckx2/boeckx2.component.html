@@ -1,0 +1,51 @@
+<p class="jan">Jan Boeckx</p>
+<div *ngIf="showInformation == false">
+    <p>{{message}}</p>
+    <input class="field" [(ngModel)]="information.firstName" placeholder="Voornaam" />
+    <input class="field" [(ngModel)]="information.lastName" placeholder="Achternaam" />
+    <br>
+    <input class="field" [(ngModel)]="information.birthPlace" placeholder="Geboorteplaats"/>
+    <br>
+    <input class="field" [(ngModel)]="information.dorp" placeholder="Dorp"/>
+    <input class="field" [(ngModel)]="information.postcode" placeholder="Postcode"/>
+    <br>
+    <input class="field" [(ngModel)]="information.loonperuur" placeholder="Loon per uur"/>
+    <br>    
+    <br>
+    <input class="doorgeefknop" type="button" value="Informatie doorgeven" (click)="ControlInformation()">    
+</div>
+<br>
+
+<table *ngIf="showInformation == true">
+    <tr>
+        <th>Voornaam</th>
+        <th>Achternaam</th>
+        <th>Geboorteplaats</th>
+        <th>Woonplaats</th>
+        <th>Postcode</th>
+        <th>Loon per uur</th>
+    </tr>
+    <tr *ngFor="let m of mensen">
+        <td>{{m.voornaam | lowercase}}</td>
+        <td>{{m.achternaam | uppercase}}</td>
+        <td>{{m.geboorteplaats}}</td>
+        <td>{{m.dorp | uppercase }}</td>
+        <td>{{m.postcode}}</td>
+        <td>{{m.loonperuur | currency:'EUR' }}</td>
+        <td></td>
+    </tr>
+
+    <input type="button" value="Hover voor nieuwe tabel" (mouseover)="NewInformation()">
+</table>
+
+<div>                                           <!--reference variable -->
+    <input #in1 type="number" value="1" />
+    <button (click)="IncreaseMoney(in1.value)">Verhoog geld met €1</button>
+    <p>{{verhoogd | currency:"EUR"}}</p>
+</div>
+
+<div class="kompas">
+    <p>Laat de windrichting wisselen (selecteer eerst de button)</p>
+    <button class="arrow" (click)="Move($event)">{{pictogram}}</button>
+    <p>{{windrichting}}</p>
+</div>

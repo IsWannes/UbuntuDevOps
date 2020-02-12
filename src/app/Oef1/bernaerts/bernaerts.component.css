@@ -1,0 +1,15 @@
+.Naam{
+    color: blue;
+    font-size: 150%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Verjaardag{
+    color: blueviolet;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Datum{
+    color: chocolate;
+    font-size: medium;
+}

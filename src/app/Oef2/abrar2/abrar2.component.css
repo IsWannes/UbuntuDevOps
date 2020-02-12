@@ -1,0 +1,79 @@
+    .grid-container {display: grid;grid-template-columns: auto auto auto;background-color: red;padding: 2px;}
+  
+    .grid-item {border-style: ridge;padding: 10px;font-size: 12px;text-align: center;}
+
+    .spelers{width: 450px;display: inline-block;vertical-align: middle;/* border-style: ridge; */}
+    
+    .hover{border: 1px solid gold;}
+
+    .tof{font-size: 100px;}
+
+    h1,h2{font-family: monospace;}
+  
+    img {background-repeat: no-repeat;background:no-repeat;}
+
+    .danger {width: 325px;height: 350px;}
+
+    .warning {width: 55px; height: 50px;}
+
+    .keepOut{width: 450px;border: 1px solid gold;display: inline-block;vertical-align: middle;}
+    
+    .messi{width: 185px;height: 385px;}
+    
+    .neymar{width: 400px; height: 350px;} .neymar2{width: 300px;height: 350px;}
+
+    .griezmann{width: 200px;height: 350px;} .griezmann2{width: 250;height: 350px;}
+
+    .dollar {width: 470px;height: 225px;}
+
+    .knop {width: 175px;}
+
+    .money {color: tomato;font-size: 35px;}
+
+    .voegToe {border-style: ridge;}
+    
+    .naam {font-size: 40px;color: tomato; font-weight: bold;border-style: ridge;font-family: monospace;margin: 0 auto;position: relative;text-align: center;}
+
+    .whoami {font-size: 40px;color: gold; font-weight: bold;border-style: ridge;font-family: Courier, monospace;margin: 0 auto;position: relative;text-align: center;}
+
+    .header {height: 100px;}
+
+    form.ng-invalid, input.ng-invalid {background-color: tomato;}
+
+    input.ng-valid {background-color: lightgreen;}
+
+    ::placeholder{color: white;}
+
+    .list {width:410px;margin:0 auto;}
+    
+    .list ol {list-style-type: none;}
+
+    .list ol li{position: relative;margin-bottom: 1.5em;padding: 0.5em;background-color: white;padding-left: 58px;border-style: ridge;}
+    
+    .list a{text-decoration:none;color:black;font-size:15px;font-family: 'Raleway', sans-serif;}
+    
+    .list li:hover{box-shadow:inset -1em 0 tomato;-webkit-transition: box-shadow 0.5s; /* For Safari 3.1 to 6.0 */transition: box-shadow 0.5s;}
+    
+    .list ol li:before {position: absolute;top: -0.3em;left: -0.5em;width: 1.8em;height: 1.2em;font-size: 2em;line-height: 1.2;font-weight: bold;text-align: center;
+    color: white;background-color: tomato;transform: rotate(-20deg);-ms-transform: rotate(-20deg);-webkit-transform: rotate(-20deg);z-index: 99;overflow: hidden;
+    content: counter(li-counter);counter-increment: li-counter;}
+
+    body {margin: 0;height: 100vh;display: flex;align-items: center;justify-content: center;background-color: black;}
+    
+    .neon {position: relative;overflow: hidden;filter: brightness(200%);}
+    
+    .text {background-color: white;color: tomato;font-size:25px;font-weight: bold;font-family: sans-serif;text-transform: uppercase;position: relative;user-select: none;}
+    
+    .gradient {position: absolute;
+        background: linear-gradient(45deg, black, red,gold, tomato, gold, red, black);
+        top: 0;left: 0;right: 0;bottom: 0;mix-blend-mode: multiply;}
+    
+    .spotlight {position: absolute;top: -100%;left: -100%;right: 0;bottom: 0;
+        background: 
+            radial-gradient(circle,white,transparent 25%) center / 25% 25%,
+            radial-gradient(circle, white, black 25%) center / 12.5% 12.5%;
+        animation: light 5s linear infinite;mix-blend-mode: color-dodge;}
+    
+    @keyframes light {to {transform: translate(50%, 50%);}}
+          
+  

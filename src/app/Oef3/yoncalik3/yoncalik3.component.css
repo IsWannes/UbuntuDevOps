@@ -1,0 +1,29 @@
+#IpAddressTracker {border-style: dashed;width: 100%;background-color: azure;} 
+td {border-style: double;padding: 8px;font-size: 20px;}  
+tr:nth-child(even){background-color: #f2f2f2;}
+th {font-size: 20px;border-style: double;}
+#ActivityGenerator {border-style: dashed;width: 100%;background-color: lavender;}
+
+#PasswordGenerator {border-style: dashed;width: 100%;background-color: mistyrose;}
+#NumberGenerator {border-style: dashed;width: 100%;background-color: seashell;}
+
+
+.abrarChildDiv {font-size: 40p; font-weight: bold;border-style: ridge;font-family: monospace;margin: 0 auto;position: relative;text-align: center;}
+
+.jaarDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.mathDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.triviaDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.dateDiv {border-style: ridge;height: 100%; width: 450px;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.passwordDiv {border-style: ridge;height: 100%; width: 100%;display: inline-block;vertical-align: middle;padding: 15px;}
+
+.generatedPasswordH3 {font-size: 20px;font-weight: bold;}
+
+.arrowToLeft {font-size: 50px;color: gold;}
+
+.arrowToRight {font-size: 50px;color: gold;}
+
+.passwordButton {padding: 5px;}

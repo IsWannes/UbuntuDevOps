@@ -1,0 +1,11 @@
+h1{
+ color: white;
+}
+h2{
+    color:white;
+}
+button.emoji{
+     position: sticky;
+    float: left;
+      top: 0%;
+  }

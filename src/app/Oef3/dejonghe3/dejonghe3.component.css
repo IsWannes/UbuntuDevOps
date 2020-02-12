@@ -1,0 +1,23 @@
+div{
+    background-color: rgb(36, 36, 36);
+    border-radius: 1rem;
+}
+h1{
+    color:red;
+}
+h2{
+    color:red;
+}
+li{
+    color:red;
+    list-style: none;
+}
+form{
+    color:red;
+}
+select{
+    color:red;
+}
+p{
+    color:red;
+}

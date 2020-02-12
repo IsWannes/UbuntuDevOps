@@ -1,0 +1,19 @@
+<h2>Het heuvelig stukje van Van Den Heuvel deel 2:</h2>
+<input pButton type="button" (mouseover)="TryMe($event)" value="Try Me" >
+<p *ngIf="tried">Jouw muislocatie op dit scherm is: x:{{xPos}}, y:{{yPos}}</p>
+<input pButton type="button" (click)="Undefined()" (mousemove)="NameChange()" [disabled]="endOfSong" [value]="name1">
+<div *ngIf="clicked">
+    <div *ngFor="let words of lijst">
+        <p>{{words}}</p>
+    </div>
+    <p *ngIf="endOfSong">Wat is de naam van dit befaamde Rode-Codexlied?
+            <input #lied type="text" (keyup)="LiedChecker(lied.value)">
+            <img [src]="imageUrl" class="image" >
+    </p>
+    
+<div *ngIf="ingevuld">
+    <p *ngIf="correct">Proficiat Commilitones!       
+    </p>
+    
+</div>
+</div>

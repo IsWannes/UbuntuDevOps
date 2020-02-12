@@ -1,0 +1,67 @@
+<h1>Ayoub Aouraghe</h1>
+<div *ngIf="check2">
+<p>give your billing information</p>
+<div *ngIf="check">
+        <input type="text" name="Name"  [(ngModel)]="naam" placeholder="Name">
+        <input type="text" name="Laste name" [(ngModel)]="Voornaam" placeholder="Last name"> 
+        <br>
+        <input type="text" name="Company" [(ngModel)]="Comp" placeholder="Company name">
+        <input type="text" name="Company" [(ngModel)]="Airport" placeholder="Main Base airport">
+        <br>
+        
+        <input type="number" name="Vat number" [(ngModel)]="Vat" placeholder="Vat-number">
+        <button (click)="info($event)">Save</button>
+</div>
+<br>
+<Div *ngIf="displayname">
+  
+    <div *ngFor="let m of Merken">
+      <h1>{{m.Name}}</h1> <br>
+      
+        <div *ngFor="let type of m.Totaal; let i = index">
+          
+          <input type="checkbox" #n value="{{type}}"  (change)="AddBox(type)" id="i" >{{type}}<br>
+          
+        </div>
+      
+    </div>
+  
+</Div>
+<button (click)="toggle()"> {{B1}}</button>
+
+<div>
+  <h2>{{title}}</h2>
+  <p>{{var1}} {{var2}}</p>
+  <p>{{var3}} {{var4}}</p>
+  <p>{{var5}}</p>
+  <p *ngIf="items.length == 0">Empty order list!</p>
+  
+    <li *ngFor="let item of items; let i = index">
+      {{item}} 
+      <button (click)="Delete(i)">x</button> 
+    </li>
+  
+  <form action="">
+    <input name="in1" #invoer type="text" [(ngModel)]="item" [placeholder]="placeholder">
+    <input name="in2" #invoer type="number" [(ngModel)]="num" [placeholder]="placeholder1">
+    <button (click)="Add()" [disabled]="item == ''">Add</button>
+  </form>
+</div>
+<button (click)="Einde()">Finished my order</button>
+</div>
+
+<div *ngIf="!check2">
+    <p>Thank you for your order {{var1}} {{var2}}</p>
+    <p>{{var3}} {{var4}}</p>
+    <p>{{var5}}</p>
+    ordert:
+    <li *ngFor="let item of items; let i = index">
+         {{item}}      
+    </li>
+    <p>In the future you can add an amount of aircraft of the same type</p>
+    
+    <button (click)="Begin()">Nieuwe order</button>
+    <button (click)="text='temporary not available!'">Pay</button>
+    <br>
+    {{text}}
+</div>

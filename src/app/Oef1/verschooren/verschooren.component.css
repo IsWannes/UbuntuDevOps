@@ -1,0 +1,21 @@
+.box{
+    float: left;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(128, 128, 128);
+}
+.box2{
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+    background-color: red;
+    float: left;
+}

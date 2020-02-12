@@ -1,0 +1,124 @@
+<div class="abrarChildDiv">
+
+   <br> <br> <br>
+
+   <div class="passwordDiv">
+
+      <h1>Fasten your Password</h1>
+
+      <h3>Password length (10+)</h3>
+      <input #input type="number" pInputText [(ngModel)]="property" min="10" value="10" />
+      <h3>Number of passwords to generate?</h3>
+      <input #input2 type="number" pInputText [(ngModel)]="property2" min="1" value="1" />    
+
+      <br> <br> <br>
+
+      <button class="passwordButton" type="button" (click)="GetPassword(input.value, input2.value)"><img
+            [src]="passGeneratorUrl" height="50" width="50" /></button><br>
+
+      <h3 *ngIf="check == true"><br><b class="generatedPasswordH3">Generated Password: </b> <br>
+         --------------------------- <br></h3>
+
+      <h3 *ngFor="let ipp of iPass; let i= index">
+         <span class="arrowToRight">&#8680;</span> {{ipp}} <span class="arrowToLeft">&#8678;</span>
+      </h3>
+
+   </div>
+
+   <br> <br> <br>
+
+   <h1>Hookup Some Facts </h1>
+
+   <div class="jaarDiv">
+
+      <h3> <span class="arrowToRight">&#8680;</span> Year Facts</h3>
+
+      <button type="button" (click)="GetYearFacts()"><img [src]="searchImageUrl" height="25"
+            width="25" /></button><br><br>
+
+      {{iYear}}
+
+   </div>
+
+   <br> <br> <br>
+
+   <div class="mathDiv">
+
+      <h3><span class="arrowToRight">&#8680;</span> Math Facts</h3>
+
+      <button type="button" (click)="GetMathFacts()"><img [src]="searchImageUrl" height="25" width="25" /></button>
+
+      <br>
+      <br>
+
+      {{iMath}}
+
+   </div>
+
+   <br> <br> <br>
+
+   <div class="triviaDiv">
+
+      <h3><span class="arrowToRight">&#8680;</span> Trivia Facts</h3>
+
+      <button type="button" (click)="GetTriviaFacts()"><img [src]="searchImageUrl" height="25" width="25" /></button>
+
+      <br>
+      <br>
+
+      {{iTrivia}}
+
+   </div>
+
+   <br> <br> <br>
+
+   <div class="dateDiv">
+
+      <h3><span class="arrowToRight">&#8680;</span> Date Facts</h3>
+
+      <button type="button" (click)="GetDateFacts()"><img [src]="searchImageUrl" height="25" width="25" /></button>
+
+      <br> <br>
+
+      {{iDate}}
+
+   </div>
+
+   <br> <br> <br>
+
+   <div class="showDetailsDiv">
+
+      <div>
+         <h1>Let's bet i know your details...</h1>
+         <h2>Don't trust me?</h2>
+         <h4>(Service &#8680; Arafa Yoncalik)</h4>
+         <button type="button" (click)="showIpData()"><img [src]="watchingEye" height="30"
+               width="30" /></button>&nbsp;&nbsp;&nbsp;
+         <button type="button" (click)="hideData()"><img [src]="notWatchingEye" height="30" width="30" /></button>
+         <br ><br>
+
+      </div>
+
+      <div class="aaa" *ngIf="showDetails == true">
+         <div class="ui-g">
+            <div class="ui-g-12">IP address <span class="arrowSmallToRight">&#8680;</span> {{ipAddress}}</div>
+         </div>
+         <div class="ui-g">
+            <div class="ui-g-12">Country <span class="arrowSmallToRight">&#8680;</span> {{iCountry}}</div>
+         </div>
+         <div class="ui-g">
+            <div class="ui-g-12">City <span class="arrowSmallToRight">&#8680;</span> {{iCity}}</div>
+         </div>
+         <div class="ui-g">
+            <div class="ui-g-12">Zipcode <span class="arrowSmallToRight">&#8680;</span> {{iPostal}}</div>
+         </div>
+         <div class="ui-g">
+            <div class="ui-g-12">Org. <span class="arrowSmallToRight">&#8680;</span> {{iOrg}}</div>
+         </div>
+         <div class="ui-g">
+            <div class="ui-g-12">Location <span class="arrowSmallToRight">&#8680;</span> Latitude: {{iLatitude}} /
+               Longitude: {{iLongitude}}</div>
+         </div>
+      </div>
+   </div>
+</div>

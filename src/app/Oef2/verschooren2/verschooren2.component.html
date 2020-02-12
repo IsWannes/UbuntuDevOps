@@ -1,0 +1,37 @@
+Verschooren 
+<!--ngIf-->
+<div *ngIf="!resolveAll" class="hoverBox" (mouseleave)="allesTerug()">Pech {{naam}}, Nu is alles verdwenen</div>
+<div *ngIf="resolveAll">
+<div>
+    <h2>Welk is het beste fietsmerk?:</h2>
+    <button class="button" type="button" (click)="onClickFiets($event)">Canyon</button>
+    <button class="button" type="button">S-Works</button>
+    <button class="button" type="button">Trek</button>
+    <h2 *ngIf="fietsBool" class="Fiets">The best bang for your buck - Canyon is the best</h2>
+</div>
+
+<!--ngFor-->
+
+<button type="submit" (click)="dbActivate()">Klik hier om de prijzen per fiets te zien</button>
+<table *ngIf="ActivateList" class="fietsLijst">
+    <tr>
+        <td>S No.</td>
+        <td>Bike Brand</td>
+        <td>Price</td>
+    </tr>
+    <tr *ngFor="let database of databaseEntries; let myIndex = index;">
+        <td>{{myIndex + 1}}</td>
+        <td>{{database.brand}}</td>
+        <td>{{database.prijs}}</td>
+    </tr>
+</table>
+
+<p>Tekst Effect: 
+<input [(ngModel)]="input" type="text" placeholder="Typ hier je naam" #naamInput></p>
+<div class="wrapper">
+<h1 id="tekstVerander">{{input}}</h1>
+</div>
+<button class="button" type="button" (click)="show(naamInput)" >Klik hier om je naam op te slagen</button>
+<div (mouseenter)="hoverMethod()" class="hoverBox">Hover hier voor een verassing</div>
+
+</div>

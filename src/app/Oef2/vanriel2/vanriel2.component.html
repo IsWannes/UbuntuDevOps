@@ -1,0 +1,57 @@
+VanRiel 
+<!--ngIf, ngFor, 3x property binding, 2x event binding, $event variabele gebruiken, 1x template refrence variable-->
+
+<!--15 seconden welkom message tonen-->
+<p *ngIf="counter <= 15">Hi, you just opened this site <br>Welcome!</p>
+
+<!--lijst met valuta tonen en hun waarde t.o.v. de EURO-->
+<h1>VALUTAS</h1>
+<table>
+        <tr>
+            <th>Valuta</th>
+            <th>Waarde t.o.v. EURO</th>
+        </tr>
+        <tr *ngFor="let valuta of valutas"> 
+            <td>{{valuta.Name}}</td>
+            <td>{{valuta.Value | currency:'EUR'}}</td>
+        </tr>
+</table>
+
+<h1>DONEREN</h1>
+<div *ngIf="showDonation == false">
+    <input [(ngModel)]="donation.cause" placeholder="Goed doel"/>
+    <input [(ngModel)]="donation.value" placeholder="Bedrag"/>
+    <br>
+    <input [(ngModel)]="donation.card" placeholder="Kaartnummer">
+    <input [(ngModel)]="donation.cardexp" placeholder="Vervaldatum">
+    <br>
+    <input [(ngModel)]="donation.cardcvc" placeholder="CVC code">
+    <input type="button" value="Doneren" (click)="donate()">
+</div>
+
+<p *ngIf="showDonation == true">Bedankt voor de donatie!
+    <br>Overzicht:
+    <br>Goed doel: {{donation.cause}}
+    <br>Bedrag: {{donation.value | currency:'EUR'}}
+    <br>Kaartnummer: {{donation.card}}
+    <br>Vervaldatum: {{donation.cardexp}}
+    <br>CVC nummer: {{donation.cardcvc}}
+    <br><input type="button" value="Wijzigen" (click)="edit()">
+</p>
+
+<h1 *ngIf="gotcha == false" (mouseenter)="disappear()">WIN 100€</h1>
+<h1 *ngIf="gotcha == true">GOTCHA</h1>
+
+<h1>KEYBOARD INPUT</h1>
+<input (keydown)="KeyboardAction($event)"/>
+<p>last key typed: {{lastKey}}</p>
+
+<h1>SUPERTELLER</h1>
+getal 1: 
+<input #in1 type="number" value=0/>
+<br> getal 2: 
+<input #in2 type="number" value=0/>
+<br>
+<button (click)="Calculate(in1.value, in2.value)">Bereken</button>
+<p>Resultaat: {{sum}}</p>
+

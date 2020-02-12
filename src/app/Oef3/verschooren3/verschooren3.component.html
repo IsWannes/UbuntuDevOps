@@ -1,0 +1,53 @@
+<br>
+<div class="Tool">
+    <div class="InputField">
+        <app-verschooren-child [ParentString]="ParentString"></app-verschooren-child>
+         <input [(ngModel)]="city" placeholder="Typ hier je stad"><br>
+        <select [(ngModel)]="State">
+            <option value="Flanders">Vlaanderen</option>
+            <option value="Brussels Capital">Brussel Hoofdstedelijk Gewest</option>
+            <option value="Wallonia">Wallonië</option>
+        </select><br>
+        <button (click)="DoSearch(city, State)">Search</button>
+    </div>
+    <div class="InfoField"> 
+        <div class="StaticInfo">
+            <div class="StaticItem">Land:</div>
+            <div class="StaticItem">Provincie:</div>
+            <div class="StaticItem">Stad:</div>
+            <div class="StaticItem">Temperatuur:</div>
+            <div class="StaticItem">Vochtigheidsgraad:</div>
+            <div class="StaticItem">Druk:</div>
+            <div class="StaticItem">Luchtkwaliteitsindex:</div>
+        </div>
+        <div class="DynamicInfo" *ngIf="AirInfo">
+            <div class="DynamicItem">{{AirInfo.country}}</div>
+            <div class="DynamicItem">{{AirInfo.state}}</div>
+            <div class="DynamicItem">{{AirInfo.city}}</div>
+            <div class="DynamicItem">{{AirInfo.temperature}} °C</div>
+            <div class="DynamicItem">{{AirInfo.humidity}} %</div>
+            <div class="DynamicItem">{{AirInfo.presure}} mb</div>
+            <div class="DynamicItem">{{AirInfo.aqius}} US AQI</div>
+        </div>
+    </div>
+</div>
+<div class="Tool2">
+    <div class="InputField">
+        <Button (click)="DoSearch2()">Get Me a Random Activity</Button>
+    </div>
+    <div class="InfoField">
+        <div class="StaticInfo">
+            <div class="StaticItem">Activity:</div>
+            <div class="StaticItem">Type:</div>
+            <div class="StaticItem">Participants:</div>
+            <div class="StaticItem">Price:</div>
+        </div>
+        <div class="DynamicInfo" *ngIf="BoredInfo">
+            <div class="DynamicItem">{{BoredInfo.activity}}</div>
+            <div class="DynamicItem">{{BoredInfo.type}}</div>
+            <div class="DynamicItem">{{BoredInfo.participants}}</div>
+            <div class="DynamicItem">{{BoredInfo.price}}</div>
+        </div>
+    </div>
+</div>
+

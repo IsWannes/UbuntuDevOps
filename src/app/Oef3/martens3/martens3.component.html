@@ -1,0 +1,11 @@
+
+<select [(ngModel)]="selectedOption" id="memeselect" *ngIf="this.Memes"(change)="MemeTonen(selectedOption)" >
+    <option *ngFor="let meme of this.Memes.data.memes; let i = index" selected="0"
+            [value]="i">
+        {{meme.name}}
+    </option>
+</select>
+
+
+<img src="{{this.MemeUrl}}" height="200" width="200">
+

@@ -1,0 +1,289 @@
+<h1><b><p>yoncalik3 works!</p></b></h1>
+
+
+<table id="IpAddressTracker"> 
+
+<tr>
+    <th colspan="2">
+    <h3> My public IP address is </h3> 
+    <p>{{ipaddress}}</p>
+    <h4>IP Address Info</h4>
+
+    </th>
+</tr>
+  
+
+
+<td>
+<tr>
+
+    <p>latitude :</p>
+</tr>
+<tr>
+    <p>longitude :</p>
+</tr>
+<tr>
+    <p>currency :</p>
+</tr> 
+<tr>
+    <p>city :</p>
+</tr>  
+<tr>
+    <p>country :</p>
+</tr> 
+<tr>
+    <p>is_eu :</p>
+</tr>
+<tr>
+    <p>languages :</p>
+</tr>
+<tr>
+    <p>region :</p>
+</tr>
+<tr>
+    <p>region code :</p>
+</tr>
+<tr>
+    <p>country name :</p>
+</tr>
+<tr>
+    <p>continent code :</p>
+</tr>
+<tr>
+    <p>postal :</p>
+</tr>
+<tr>
+    <p>timezone :</p>
+</tr>
+<tr>
+    <p>utc offset :</p>
+</tr>
+<tr>
+    <p>country calling code:</p>
+</tr>
+<tr>
+    <p>org :</p>
+</tr>
+
+
+    
+</td>
+<td>
+    <tr>
+
+        <p>{{latitude}}</p>
+    </tr>
+    <tr>
+        <p>{{longitude}}</p>
+    </tr>
+    <tr>
+        <p>{{currency}}</p>
+    </tr>
+    <tr>
+        <p>{{city}}</p>
+    </tr>   
+    <tr>
+        <p>{{country}}</p>
+    </tr>  
+    <tr>
+        <p>{{in_eu}}</p>
+    </tr> 
+    <tr>
+        <p>{{languages}}</p>
+    </tr>
+    <tr>
+        <p>{{region}}</p>
+    </tr>
+    <tr>
+        <p>{{region_code}}</p>
+    </tr>
+    <tr>
+        <p>{{country_name}}</p>
+    </tr>
+    <tr>
+        <p>{{continent_code}}</p>
+    </tr>
+    <tr>
+        <p>{{postal}}</p>
+    </tr>
+    <tr>
+        <p>{{timezone}}</p>
+    </tr>
+    <tr>
+        <p>{{utc_offset}}</p>
+    </tr>
+    <tr>
+        <p>{{country_calling_code}}</p>
+    </tr>
+    <tr>
+        <p>{{org}}</p>
+    </tr>
+
+
+</td>
+</table>
+
+
+
+
+
+
+
+
+<table id="ActivityGenerator"> 
+
+    <tr>
+        <th colspan="2">
+        <h3> Random YES/NO Generator </h3>    
+        <p></p>
+        Reload page to see random answer & gif
+        </th>
+    </tr>
+      
+    
+    
+    <td>
+    <tr>    
+        <p>Answer :  </p>
+    </tr>
+
+    <tr>
+        <p>GIF :  </p>
+    </tr> 
+
+   
+    
+    
+        
+    </td>
+    <td>
+        <tr>
+            <p>{{answer}}</p>
+        </tr>
+        <tr>
+            <p><img src="{{gif}}" width="300px"></p>
+        </tr>
+
+    </td>
+   
+
+
+
+</table>
+
+
+
+<table id="PasswordGenerator">
+
+
+    <tr>
+        <th colspan="2">
+        <div class="passwordDiv">
+    
+            <h1>Fasten your Password : Service of Amir Abrar</h1>
+      
+            <h3>Password length (10+)</h3>
+            <input #input type="number" pInputText [(ngModel)]="property" />
+      
+            <h3>Number of passwords to generate?</h3>
+            <input #input2 type="number" pInputText [(ngModel)]="property2" />
+      
+            <br>
+            <br>
+            <br>
+      
+            <button class="passwordButton" type="button" (click)="GetPassword(input.value, input2.value)"><img
+                  [src]="passGeneratorUrl" height="50" width="50" /></button><br>
+      
+            <h3 *ngIf="check == true"><br><b class="generatedPasswordH3">Generated Password: </b> <br>
+               --------------------------- <br></h3>
+      
+            <h3 *ngFor="let ipp of iPass; let i= index">
+               <span class="arrowToRight">&#8680;</span> {{ipp}} <span class="arrowToLeft">&#8678;</span>
+            </h3>
+      
+         </div>
+    
+        </th>
+        </tr>
+
+
+</table>
+
+
+
+
+<table id="NumberGenerator">
+<br>
+<br>
+<br>
+
+<h1>Hookup Some Facts : Second Service Of Amir Abrar </h1>
+
+<div class="jaarDiv">
+
+   <h3> <span class="arrowToRight">&#8680;</span> Year Facts</h3>
+
+   <button type="button" (click)="GetYearFacts()"><img [src]="searchImageUrl" height="25"
+         width="25" /></button><br><br>
+
+   {{iYear}}
+
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="mathDiv">
+
+   <h3><span class="arrowToRight">&#8680;</span> Math Facts</h3>
+
+   <button type="button" (click)="GetMathFacts()"><img [src]="searchImageUrl" height="25" width="25" /></button>
+
+   <br>
+   <br>
+
+   {{iMath}}
+
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="triviaDiv">
+
+   <h3><span class="arrowToRight">&#8680;</span> Trivia Facts</h3>
+
+   <button type="button" (click)="GetTriviaFacts()"><img [src]="searchImageUrl" height="25" width="25" /></button>
+
+   <br>
+   <br>
+
+   {{iTrivia}}
+
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="dateDiv">
+
+   <h3><span class="arrowToRight">&#8680;</span> Date Facts</h3>
+
+   <button type="button" (click)="GetDateFacts()"><img [src]="searchImageUrl" height="25" width="25" /></button>
+
+   <br>
+   <br>
+
+   {{iDate}}
+
+</div>
+
+<br>
+<br>
+<br>
+
+</table>

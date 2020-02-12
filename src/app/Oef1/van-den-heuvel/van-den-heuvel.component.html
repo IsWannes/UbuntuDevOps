@@ -1,0 +1,11 @@
+<h1>Het heuvelig stukje van {{naam}}</h1>
+<div class = "birthday">
+    <p>Mijn verjaardag is op {{birthday | date:"dd-MM-yy"}}</p>
+    <p>Het duurt nog {{daysToBirthday | number: '2.0-0' }} dagen en {{timeToBirthday | date: 'HH'}} uur tot ik jarig ben.</p>
+    <p *ngIf="daysToBirthday < 7">"We kunnen beginnen aftellen!</p>
+
+    <button (click)="checkBirthday()">Is het al mijn verjaardag?</button>
+    <p *ngIf="birthdayCheck == true">{{birthdayMessage | uppercase}}</p>
+
+    <p>Graag wat geld aub als cadeau aub. Aantal: {{random | number: '3.0-2' | currency:"EUR"}}</p>
+</div>

@@ -1,0 +1,13 @@
+<div class="first_box">
+    <h1>{{name}}</h1>
+    <div class="second_box"> Your are number {{ random | number  }}
+        <br>
+        Do you live in {{cities[0] | titlecase }} ?
+        <br>
+        <button (click)="happy()">Yes</button>
+        <button (click)="sad()">No</button></div>
+    <div class="third_box"><br>
+        Do you have {{ price + price2 | currency }} ?
+        <br>
+        <button type="submit" (click)="ShowTheMsg()">YES</button></div>
+</div>

@@ -1,0 +1,32 @@
+ul {list-style-type: none;}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+    border: 2px solid black;
+  }
+  
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    border: 2px solid black;
+  }
+  .navigatie{
+      width: 50px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  label{
+      font-size: 50px;
+  }
+
+  .rand{
+    border: 2px solid black;  
+  }

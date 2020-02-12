@@ -1,0 +1,21 @@
+<div *ngIf = "showjokes">
+    <button (click)="getProgrammerJoke(); getRandomName()">{{textbtn1}}</button>
+    <button (click)="getNormalJoke(); getRandomName()">{{textbtn2}}</button>
+
+    <h3 *ngIf = "joke != null" >{{joke}}</h3>
+    <h4 *ngIf = "punchline != null">{{punchline}}</h4>
+
+    <p>Your Reaction: </p>
+    <select [(ngModel)] = "position" *ngIf = "joke != null" (ngModelChange)="reaction()">
+        <option value="1">Realy funny 😂</option>
+        <option value="2">Badumm tsss 🥁</option>
+        <option value="3">Pff, not funny at all 🥱</option>
+    </select>
+
+    <br>
+    <h5 [innerHTML] = "reactionString"></h5>
+
+    <br>
+    <h4 *ngIf="name != null">You can tell this joke to {{name}}</h4> 
+
+</div>

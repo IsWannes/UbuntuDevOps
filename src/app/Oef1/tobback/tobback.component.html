@@ -1,0 +1,21 @@
+<div>
+    <p>{{Myname | uppercase}}</p>
+    <br>
+    <input #in1 placeholder="FirstName" type="text">
+    <br>
+    <input #in2 placeholder="LastName" type="text">
+    <br>
+    <p>birthday:</p>
+    <input #in3 type="date">
+    <button (click)="Create(in1.value,in2.value,in3.value)">Send</button>
+    <br>
+    <table *ngIf="people.length != 0">
+        <tr *ngFor="let item of people; let i = index">
+            <td>{{item.firstname | uppercase}}</td>
+            <td>{{item.lastname | uppercase}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.birthdate | date:"dd-MM-yy"}}</td>
+            <br>
+        </tr>
+    </table>
+</div>

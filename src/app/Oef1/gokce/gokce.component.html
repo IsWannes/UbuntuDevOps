@@ -1,0 +1,59 @@
+<div class="background"><h1>{{Naam|uppercase}}</h1>
+<h4>{{date|date:"dd-MM-yy HH:mm:ss"}}</h4>
+<select #rate>
+    <option selected value="EUR">EUR</option>
+    <option selected value="TL">TL</option>
+    <option selected value="USD">USD</option>
+</select>
+<h3>Huidige Waarde:</h3>
+<div *ngIf="rate.value=='EUR'">
+    <h3 >1 EUR =</h3>
+<div class="grid-container" > 
+        <div class="grid-item">{{EUR|currency:'EUR':true}}</div>
+        <div class="grid-item">{{USD|currency:'USD':true}}</div>
+        <div class="grid-item">{{TL|currency:'₺':true}}</div>  
+</div>
+</div>
+
+<div *ngIf="rate.value=='TL'">
+<h3 >1 TL =</h3>
+<div class="grid-container" *ngIf="rate.value=='TL'"> 
+        <div class="grid-item">{{EUR/TL|currency:'EUR':true}}</div>
+        <div class="grid-item">{{USD/TL|currency:'USD':true}}</div>
+        <div class="grid-item">{{TL/TL|currency:'₺':true}}</div>  
+</div>
+</div>
+<div *ngIf="rate.value=='USD'">
+<h3 >1 USD =</h3>
+<div class="grid-container" *ngIf="rate.value=='USD'"> 
+        <div class="grid-item">{{EUR/USD|currency:'EUR':true}}</div>
+        <div class="grid-item">{{USD/USD|currency:'USD':true}}</div>
+        <div class="grid-item">{{TL/USD|currency:'₺':true}}</div>  
+</div>
+</div>
+
+
+<h3>Turkish Lira Simulator: {{EUR|currency:'EUR':true}} = {{TLSim|currency:'₺':true}}</h3>
+
+<button (click)="RandomRPS()">Random Rock Paper Scissors:</button>
+<div class="grid-container"> 
+        <div class="grid-item">{{rpsP1}}</div>
+        <div class="grid-item">{{rpsP2}}</div>
+        <div class="grid-item">{{rps}}</div>  
+</div>
+
+<!-- <img src='https://static.thenounproject.com/png/477918-200.png' alt="image" height="30px"> -->
+
+<!-- {{rps}} -->
+<!-- {{compare("rock","scissors")}} -->
+
+
+
+<!-- <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class ="dropdown-content">
+        <a>Link1</a>
+        <a>Link2</a>
+    </div>
+
+</div> --></div>

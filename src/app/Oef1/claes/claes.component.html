@@ -1,0 +1,20 @@
+<div id="wrapper">
+    <b>{{GetName()}} {{person.lastName}}</b>
+    <h1 [ngStyle]="{background:activeColor}">Het is nu: {{theDate | date:activeShowType | lowercase}}</h1>
+
+<ul class="horizontal">
+    <li *ngFor="let color of colors" (click)="setColorAsActive(color)">
+        <a [class.active]="color === activeColor">
+            {{ color }}
+        </a>
+    </li>
+</ul>
+<ul class="show">
+    <li *ngFor="let showType of showTypes" (click)="setShowTypeAsActive(showType)">
+        <a [class.active]="showType === activeShowType">
+            {{ showType }}
+        </a>
+    </li>
+</ul>
+<p id="randomGetal">{{randGet | currency: 'EUR'}}</p>
+</div>

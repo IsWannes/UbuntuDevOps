@@ -1,0 +1,50 @@
+<div id="paginaContainer">
+    <h1>Cocktail Generator</h1>
+    <h3>Met de feestdagen voor de deur leek het me leuk om een cocktail generator te maken. Selecteer een ingrediënt en deze applicatie zal voor jou een cocktail maken.</h3>
+    
+    
+    <app-fruhschulz-child [beschrijvingInput]="'Selecteer een ingrediënt zoals bv. Gin en klik op de generate cocktail knop, er zal voor jou een cocktail worden getoond.'"></app-fruhschulz-child>
+    
+    <select [(ngModel)]="drankKeuze">
+        <option value="gin">Gin</option>
+        <option value="vodka">Vodka</option>
+        <option value="rum">Rum</option>
+        <option value="tequila">Tequila</option>
+        <option value="amaretto">Amaretto</option>
+        <option value="cointreau">Cointreau</option>
+        <option value="whiskey">Whiskey</option>
+        <option value="lemon">Lemon</option>
+        <option value="lime">Lime</option>
+    
+    </select>
+    <br>
+    <br>
+    <button (click)="getCocktail()">Click me to generate a cocktail!</button>
+    
+    <div [hidden]="cocktailAvailable">
+    <h3>{{strDrink}}</h3>
+    
+    
+    <img [src]="imageSourceCocktail" [hidden]="imageAvailable" width="20%" height="20%">
+
+    <table class="center">
+        <thead>
+            <th>Ingrediënt</th>
+            <th>Hoeveelheid</th>
+        </thead>
+            <tr *ngFor = "let ingr of ingredients; let i = index">
+                <td>{{ingr.ingredient}}</td>
+                <td>{{ingr.measurement}}</td>
+            </tr>
+    </table>
+
+    
+    
+    
+    
+    
+    <h3>Hoe maak ik deze cocktail?</h3>
+    <h4>Gebruik hiervoor een {{strGlass}}</h4>
+    <p>{{instruction}}</p>
+    </div>
+    </div>

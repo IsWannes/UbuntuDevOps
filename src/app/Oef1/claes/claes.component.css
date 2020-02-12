@@ -1,0 +1,59 @@
+ul.horizontal li {
+    float:left;
+    cursor: pointer;
+  }
+  
+  ul.horizontal {
+    float:left;
+    overflow: auto;
+    margin: 0 0 3em 0;
+    padding: 0;
+    list-style: none;
+    background-color: #E2E2E2;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+  }
+  
+  ul.horizontal li a {
+    color: #000;
+    display: block;
+    position: relative;
+    line-height: 32px;
+    padding: 10px 10px 10px 10px;
+    white-space: nowrap;
+    border-right: 1px solid #ccc;
+  }
+ 
+  ul.horizontal li a.active {
+    background-color: #0275E7;
+    color: #ffff;
+  }
+  
+  ul.show li {
+    float:left;
+    cursor: pointer;
+  }
+  
+  ul.show {
+    float: left;
+    margin: 0 0 3em 0;
+    padding: 0;
+    list-style: none;
+    background-color: #E2E2E2;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+  }
+  ul.show li a {
+    color: #000;
+    display: block;
+    position: relative;
+    line-height: 32px;
+    padding: 10px 10px 10px 10px;
+    white-space: nowrap;
+    border-right: 1px solid #ccc;
+  }
+  ul.show li a.active {
+    background-color: #0275E7;
+    color: #ffff;
+  }
+

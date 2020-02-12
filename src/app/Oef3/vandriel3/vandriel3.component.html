@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color: darkgrey;
+        }
+    </style>
+<head>
+</head>
+
+<body>
+    <div>
+        <h1>vandriel3 works!</h1>
+        <!-- Tom zn api -->
+        <br><br><br>
+        <div>
+            <button (click)="getProgrammerJoke()">{{textbtn1}}</button>
+            <button (click)="getNormalJoke()">{{textbtn2}}</button>
+        
+            <h3 *ngIf = "joke != null" >{{joke}}</h3>
+            <h4 *ngIf = "punchline != null">{{punchline}}</h4>  
+        </div>
+
+        <br><br><br>
+        
+        <!-- eigen api -->
+        <input type="text" [(ngModel)]="naam" placeholder="To (name)"> <!-- Naam input -->
+        <br>
+        <input type="text" [(ngModel)]="from" placeholder="From (name)"> <!-- From input -->
+        <br>
+        <app-vandriel-child [ToName]="naam" [FromName]="from"></app-vandriel-child>       <!-- child -->
+        <br>
+    </div>
+</body>
+
+</html>

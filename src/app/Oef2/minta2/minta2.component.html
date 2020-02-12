@@ -1,0 +1,61 @@
+<h3>Maxime Minta</h3>
+<div *ngIf='!secret'>
+    <p>zoek de geheime code in het kruiswoordraadsel om door te gaan.</p>
+    <div class="grid-container">
+        <div class="grid-item">Q</div>
+        <div class="grid-item"><b>R</b></div>
+        <div class="grid-item">K</div>
+        <div class="grid-item">H</div>
+        <div class="grid-item">U</div>
+        <div class="grid-item">I</div>
+        <div class="grid-item">P</div>
+        <div class="grid-item">Y</div>
+        <div class="grid-item">A</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">G</div>
+        <div class="grid-item">I</div>
+        <div class="grid-item">P</div>
+        <div class="grid-item">K</div>
+        <div class="grid-item">A</div>
+        <div class="grid-item">V</div>
+        <div class="grid-item">G</div>
+        <div class="grid-item">I</div>
+        <div class="grid-item">P</div>
+        <div class="grid-item">N</div>
+    </div>
+</div>
+<br>
+<b id="code" [style.background-color]="color">{{text}}</b>
+<br>
+<div *ngIf="!secret">
+    <p>geheime code:
+        <input [(ngModel)]="text" type="text" placeholder="Code hier"></p>
+    <input type="button" value="Code: {{text}}" (click)="CheckCode()">
+
+</div>
+
+<div *ngIf="secret">
+    <h3>Correct!</h3>
+    <h1><a href="https://youtu.be/lXMskKTw3Bc" target="blank">Hier is je beloning!🙃</a></h1>
+
+    <br>
+    <ul>
+        <li *ngFor="let value of values">
+          {{value.name}}
+        </li>
+    </ul>
+    
+    <p>Kan jij deze code kraken???</p>
+    <p><i>{{generateCode()}}</i></p>
+
+
+    <img [src]="imageUrl" alt="yummie!" width=150px>
+    <br>
+<input type="button" (mouseover)="ChangeState($event)" [value]="ButtonValue">
+<input type="text" placeholder="Naam" #textinput>
+<button type="button" (click)="initialize(textinput)">Verzenden</button>
+{{laatste}}
+<br>
+<a [href]="URL">klik niet op mij...</a>
+
+</div>

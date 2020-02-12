@@ -1,0 +1,27 @@
+<h1>Lightsaber Maker</h1>
+<div *ngIf="!ready">
+    <p>Build your own lightsaber</p>
+    <button type="button" (click)="readyToBuild()">Click here when ready you are.</button>
+</div>
+<div id="builder" *ngIf="ready">
+    <div>
+        <select (change)="TurnOff()" id="PickColor" class="select-css" >
+            <option *ngFor="let value of colors" value="{{value.color}}">{{value.color}}</option>
+        </select>
+    </div>
+        
+    
+    <img  *ngIf="!TurnedOn" [src]="imageLsOff">
+    <img class="rotate" *ngIf="choiceBlue" [src]="imageLsBlueOn">
+    <img class="rotate" *ngIf="choiceRed" [src]="imageLsRedOn">
+    <img class="rotate" *ngIf="choiceGreen" [src]="imageLsGreenOn">
+    <img class="rotate" *ngIf="choicePurple" [src]="imageLsPurpleOn">
+
+    <button (click)="Ignite()">Ignite!</button>
+</div>
+<div>
+    <a class="rainbow">
+        <p [innerHTML]="name"></p>
+      </a>
+</div>
+

@@ -1,0 +1,48 @@
+<h1>Wat wil je vandaag koken ?</h1>
+<app-vangoethem-child [Text]="'Je kan kiezen uit 5 lekkernijen'"></app-vangoethem-child>
+
+<div class="ChooseField">
+    <select [(ngModel)]="IdMeal">
+        <option value="52774">Pad See Ew</option>
+        <option value="52772">Teriyaki Chicken Casserole</option>
+        <option value="52771">Spicy Arrabiata Penne</option>
+        <option value="52776">Chocolate Gateau</option>
+        <option value="52769">Kapsalon</option>
+    </select>
+    <button (click)="SearchRecipe(IdMeal)">Submit</button>
+</div>
+
+<div class="RecipeField" *ngIf="RecipeInfo">
+    <p>Je hebt gekozen om {{RecipeInfo.strMeal}} te maken</p>
+    <p>Dit is typisch {{RecipeInfo.strArea}}</p>
+    <p>Dit kan je op volgende wijze maken:</p>
+    <p>{{RecipeInfo.strInstructions}}</p>
+</div>
+
+<p>↓ Deze service is de service van een andere student ↓</p>
+<div class="bitcoinField">
+    <button (click)="DoSearch()">Get Bitcoin info</button>
+    <div *ngIf="BitcoinInfo">
+        <h3>De waarde van 1 BTC (BITCOIN)</h3>
+        <ul>
+            <li>
+                <h4>{{BitcoinInfo.usdCode}} {{BitcoinInfo.usdDescription}}</h4>
+            </li>
+            <li>
+                <h5>&#36; {{BitcoinInfo.usdRate}}</h5>
+            </li>
+            <li>
+                <h4>{{BitcoinInfo.gbpCode}} {{BitcoinInfo.gbpDescription}}</h4>
+            </li>
+            <li>
+                <h5>&pound; {{BitcoinInfo.gbpRate}}</h5>
+            </li>
+            <li>
+                <h4>{{BitcoinInfo.eurCode}} {{BitcoinInfo.eurDescription}}</h4>
+            </li>
+            <li>
+                <h5>&euro; {{BitcoinInfo.eurRate}}</h5>
+            </li>
+        </ul>
+    </div>
+</div>

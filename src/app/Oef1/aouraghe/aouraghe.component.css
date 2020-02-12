@@ -1,0 +1,24 @@
+  h1{
+    font-size: 90%;
+  }
+h2{
+    color: royalblue;
+}
+.wrapper {
+    
+    margin: auto;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 10px;
+    
+    color: #444;
+  }
+  .box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 120%;
+    font-family: 'PT Serif', serif;
+    border: 3px;
+    
+  }
+  

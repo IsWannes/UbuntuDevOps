@@ -1,0 +1,18 @@
+<div [ngStyle]="{background:Kleur}">
+
+<h1>{{Naam | uppercase}}</h1>  
+
+<h2>Tijd tot kerstmis: {{Dagen | number:'1.0-0'}} dagen, {{Uren|number:'1.0-0'}} uur, {{Minuten|number:'1.0-0'}} minuten, {{Seconden|number:'1.0-0'}} seconden!!!</h2>
+
+<button (click)="VeranderAchtergrond()">Verander achtergrondkleur</button> 
+
+
+</div>
+
+<h3>Hover over de emoji!</h3>
+
+<button class="emoji" (mouseover)="RandomPositie()"  [style.left]="xPos" [style.top]="yPos">{{emoji}}</button>
+
+<br><br><br><br><br><br><br><br><br>
+<h4>Voor elke keer dat je hovert krijg je een euro van Jan Boeckx: {{geld| currency:'EUR'}} verdient</h4>
+<h4>Aantal mental breakdowns in het afgelopen uur: {{breakdowns}}</h4>

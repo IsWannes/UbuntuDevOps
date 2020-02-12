@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <p-panel id="panel" header="Arnaud Claes" toggleable="{{panel}}">
+        <p>Geef verschillende usernames in (bevestig met "enter" of klik "add username")</p>
+        <input #newname type="text" pInputText placeholder="Username" (keydown.enter)="onKeydown($event,newname)">
+        <p-button label="Add Username" styleClass="ui-button-info" (click)="newName(newname)"></p-button>
+        <button pButton type="button" label="Print usernames" class="ui-button-success"
+            (click)="activateUsernames()"></button>
+        <table *ngIf="usernames" class="allUsernames">
+            <tr>
+                <td>Nummer</td>
+                <td>Username</td>
+            </tr>
+            <tr *ngFor="let name of names; let i =index">
+                <td>{{i+1}}</td>
+                <td>{{name}}</td>
+            </tr>
+        </table>
+        <p-button [disabled]="toggleDisabled" label="Toggle Panel" styleClass="ui-button-info"
+            (click)="panelActivate()"></p-button>
+    </p-panel>
+    <div id="imgDiv">
+        <h1>Geef nummer in voor afbeelding:</h1>
+        <input #imgNumber type="number" pInputNumber placeholder="Number 1-1000"
+            (change)="submitImage(imgNumber.value)">
+        <br><img [src]=imglink>
+    </div>
+</div>

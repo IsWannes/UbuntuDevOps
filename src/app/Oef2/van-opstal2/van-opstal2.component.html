@@ -1,0 +1,12 @@
+<div (mouseover)="changeText=true" (mouseout)="changeText=false">
+  <h1><span *ngIf="!changeText">Cedric Van Opstal - Oef 2</span></h1>
+  <h1><span *ngIf="changeText">CeDrIc VaN oPsTaL - oEf 2</span></h1>
+</div>
+<div>
+  <ul><p>Beste Films aller tijden:</p>
+    <li *ngFor="let movie of Movies; let i = index">
+      {{ i + 1 }} : {{ movie.name }}
+    </li>
+  </ul>
+</div>
+<button (click)="onSave($event)">Save</button>

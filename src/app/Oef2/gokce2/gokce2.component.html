@@ -1,0 +1,38 @@
+<div class="background">
+<h1>Gursel Gokce Oef 2 - Tic Tac Toe</h1>
+
+<h1 *ngIf="VolgendeSP">Beurt van:{{speler1.value}} {{VolgendeSpeler}} ||| Xpos:{{xPos}} Ypos{{yPos}}</h1>
+<h1 *ngIf="!VolgendeSP">Beurt van:{{speler2.value}} {{VolgendeSpeler}} ||| Xpos:{{xPos}} Ypos{{yPos}}</h1>
+
+
+<button [disabled]="notPlaying" class="start" (click)="Start()">Klik om te (her)starten</button>
+<!-- 
+<select #beurtChange [(ngModel)]="VolgendeSP">
+    <option [ngValue]="true" value="true">true</option>
+    <option [ngValue]="false" value="false">false</option>
+</select> -->
+<main>
+    <div *ngFor="let val of blokken; let i = index" (click)="VolgendeMove(i)">
+        <button [ngStyle]="getStyle(val)" (mousemove)="MuisPos($event)">{{val}}</button>
+    </div>
+</main>
+
+<h2 (mouseover)="UpdateScore()" (mouseout)="showScore=false">Hover om huidige scores te zien</h2>
+<div *ngIf="showScore">
+    <h2>{{speler1.value}} X: {{XScore}}</h2>
+    <h2>{{speler2.value}} O: {{OScore}}</h2>
+        <!-- <input readonly value="X:{{XScore}}" *ngIf="showScore">
+        <input readonly value="O:{{OScore}}" *ngIf="showScore"> -->
+
+ </div>
+
+ <h1>Naam Spelers:</h1>
+ <input #speler1 type="text" value="X">
+ <input #speler2 type="text" value="O">
+
+
+
+
+<h2 *ngIf="winnaar">{{winnaar}} heeft gewonnen</h2>
+</div>
+<!-- [ngStyle]="{'color-white':val == 'X'}" -->

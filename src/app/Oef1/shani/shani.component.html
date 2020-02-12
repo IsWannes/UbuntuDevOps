@@ -1,0 +1,10 @@
+<p>{{name | titlecase}}</p>
+<h2>{{title | uppercase}}</h2>
+<p>Kogel in slot {{bullet}}</p>
+<p>geschoten slot: {{shoot}}</p>
+<button (click)="GenerateRandom()" >Shoot!</button>
+<div>
+    <img class="{{mirror}}" width="200" height="200" src="{{imageUrl}}" alt="pic" />
+</div>
+<p *ngIf="shoot == bullet">{{output}}{{time | date: "HH:mm:ss"}}</p>
+<p *ngIf="shoot != bullet">{{output}}</p>

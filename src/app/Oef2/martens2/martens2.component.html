@@ -1,0 +1,37 @@
+Martens 
+<!--Random Waarde + checken-->
+<div>Hier is een random waarde: <strong>{{randomGetal}}</strong>
+    <p>Probeer op tijd hetzelfde getal in te voeren</p>
+    <input type="number" [(ngModel)]="text"> 
+    <p *ngIf="text == randomGetal">Jeej Proficiat</p>
+    <p *ngIf="text != randomGetal">Nope, niet hetzelfde</p>
+
+</div>
+<br>
+
+<!--Volledige naam teruggeven-->
+<div>
+    <label for="Voornaam">Voornaam: </label>
+    <input type="text" #voornaam>
+    <label for="Achternaam">Achternaam: </label>
+    <input type="text" #achternaam>
+    <button (click)="onGeefVolNaam(voornaam, achternaam)">Geef volledige naam</button>
+    <p>{{VolNaam}}</p>
+ </div>
+
+ <!--Volledige lijst van toegevoegde namen-->
+ <div><button type="button" (click)="LijstNamen()">Geef volledige lijst met namen</button>
+ 
+ <div *ngIf="NamenTonen==true">
+ <p *ngIf="_namen.length == 0">Geen namen in lijst</p>
+ <ol>
+   <li *ngFor="let naam of _namen; let i = index">{{naam.naam}}  </li>
+ </ol>
+</div>
+
+<button type="button" (click)="VerwLijst()">Verwijder lijst</button>
+</div>
+<br>
+
+<!--event om getal te verhogen-->
+<button (mouseenter)="VerhoogGetal($event)">Hover om te verhogen: {{Getal}}</button>

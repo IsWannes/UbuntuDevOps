@@ -1,0 +1,24 @@
+
+
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: cornflowerblue;
+    padding: 20px 0px 20px 0px;
+    border: 2px solid white;
+}
+h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: cornflowerblue;
+}
+.cookie{
+    height: 350px;
+    border: 2px solid cornflowerblue;
+}
+.large_cookie {
+    width: 320px;
+}
+.small_cookie {
+    width: 300px;
+}

@@ -1,0 +1,8 @@
+<div class="bigDiv">
+    <h1>{{name | uppercase}}</h1>
+    <div class="line"></div>
+    <p>{{daysDiff | number:'1.0-0'}} dagen, {{hoursDiff|number:'2.0-0'}} uur, {{minutesDiff|number:'2.0-0'}} minuten en {{secondsDiff| number:'2.0-0'}} seconden tot de zomervakantie</p>
+    <p *ngIf="!buttonPressed">{{eurValue | currency : 'EUR'}}</p>
+    <p *ngIf="buttonPressed">{{dollValue | currency : 'USD'}}</p>
+    <button (click)="toggleCurrency()">Toggle Currency</button>
+</div>

@@ -1,0 +1,14 @@
+
+
+<p-panel [toggleable]="true" [collapsed]="true" *ngFor="let Vertaling of Match">
+    
+    <p-header >{{Vertaling.language_name}} </p-header>
+    
+    <p>
+       Taal:  {{Vertaling.language_name}}
+    </p>
+    <p> Accuratie van het geraden zin :  {{Vertaling.percentage}} %</p>
+
+
+
+</p-panel>

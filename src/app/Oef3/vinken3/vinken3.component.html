@@ -1,0 +1,47 @@
+<div class="Container">
+    <h1>Lightsaber Builder 2.0</h1>
+    <app-vinken-child [SubTitle]="SubTitle"></app-vinken-child>
+    <p>Select your color:</p>
+    <select id="PickColor" class="select-css" [(ngModel)]="color_choice" (change)="Change()">
+        <option *ngFor="let value of colors" value="{{value.color}}">{{value.color}}</option>
+    </select>
+    <p>Select your handle material:</p>
+    <select id="PickHandleMaterial" class="select-css" [(ngModel)]="material_choice" (change)="Change()">
+        <option *ngFor="let value of materials" value="{{value.material}}">{{value.material}}</option>
+    </select>
+    <button (click)="Ignite()">Ignite!</button>
+    <img class="rotate" [src]="SaberUrl">
+</div>
+
+<div class="Container">
+    <h3>Get a character: </h3>
+    <input placeholder="type a star wars character" [(ngModel)]="_character">
+    <input type="button" (click)="SearchCharacter()" value="Search">
+    <h3>Extra information:</h3>
+    <ul>
+        <li *ngFor="let character of CharacterInfo">
+            <br>
+            Name: {{character.name}}<br>
+            Height: {{character.height}}cm<br>
+            Birth Year: {{character.birth_year}}<br>
+            Gender: {{character.gender}}<br>
+        </li>
+    </ul>
+    <button (click)="getShip()">Get a Starship</button>
+    <h3>Your starship:</h3>
+    <div *ngIf="ShipExists">
+        <p>Name: {{ShipInfo.name}}</p>
+        <p>Model: {{ShipInfo.model}}</p>
+        <p>Manufacturer: {{ShipInfo.manufacturer}}</p>
+        <p>Length: {{ShipInfo.length}} meters</p>
+        <p>Crew: {{ShipInfo.crew}} people</p>
+        <p>Passengers: {{ShipInfo.passengers}} people</p>
+        <p>Hyperdrive Rating: {{ShipInfo.hyperdrive_rating}}</p>
+        <p>MGLT: {{ShipInfo.MGLT}}</p>
+        <p>Class: {{ShipInfo.starship_class}}</p>
+
+
+    </div>
+</div>
+
+

@@ -1,0 +1,9 @@
+<h1>Hey you...</h1>
+<h3>You looks sad! Let me cheer you up with a joke!</h3>
+
+<div *ngIf = "showjokes == false">
+    <button (click)="setBooleanShowJokes(true)">Yes please!</button>
+    <button (click)="setBooleanShowJokes(false); showAlert()">No thanks, leave me alone</button>
+</div>
+
+<app-baeten-child [ShowJokes]="showjokes"></app-baeten-child>

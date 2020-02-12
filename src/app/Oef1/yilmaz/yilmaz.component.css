@@ -1,0 +1,60 @@
+.Name{
+    margin:auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: darkslategray;
+    width: 90%;
+    height: 60px;
+    border-radius: 2px;
+}
+
+.Foto{
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+
+.Name h1{
+    color: whitesmoke;
+}
+
+
+button{
+    margin-right: 8px;
+}
+
+.Grid{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 5px;
+    grid-gap: 5px;
+}
+.Item{
+    text-align: center;
+    color: whitesmoke;
+    background-color: darkslategray;
+    border-radius: 2px;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+    margin: 5px 5px 5px 5px;
+
+}
+
+button{
+    display: inline-block;
+    margin: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.1875rem;
+    outline: none;
+    background-color: tomato;
+    color: white;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 150ms ease-out;
+}

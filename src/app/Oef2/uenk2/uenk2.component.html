@@ -1,0 +1,27 @@
+
+<h2>Jens Uenk</h2>
+
+<div class="clicker">
+    <h1>Cookie Clicker</h1>
+    <h1>{{cookies}} Cookies!</h1>
+    <p>{{clickers}} cookie(s) per klik</p>
+    <div class="cookie">
+        <img class=small_cookie *ngIf="!hover" [src]="cookieImageUrl" (mouseover)="hover=true" (mouseout)="hover=false" (click)="Increment()">
+        <img class=large_cookie *ngIf="hover" [src]="cookieImageUrl" (mouseover)="hover=true" (mouseout)="hover=false" (click)="Increment()">
+    </div>
+    
+
+    <p *ngIf="cookies < clickerRequired">Je hebt nog {{clickerRequired - cookies}} cookies hiervoor nodig</p>
+    <p *ngIf="cookies >= clickerRequired">Je kan een exra clicker kopen voor {{clickerRequired}} cookies!</p>
+    <button [textContent]="buttonContent" [disabled]="cookies < clickerRequired" (click)="PurchaseClicker(event)"></button>
+</div>
+<div class="purchases">
+    <h3>Aankopen</h3>
+    <p *ngFor="let purchase of purchases">
+        {{purchase}}
+    </p>
+</div>
+<div class="cheater">
+    <h3>Cookie Cheater</h3>
+    <input #in1 type="number" value="100000" (change)="cookies=in1.value">
+</div>

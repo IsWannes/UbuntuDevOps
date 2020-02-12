@@ -1,0 +1,28 @@
+<div>
+
+    <select [(ngModel)]="side">
+        <option value="Dark">Dark</option>
+        <option value="Light">Light</option>
+    </select>
+
+    <app-dejonghe-child [side]="side"></app-dejonghe-child>
+
+    <h1>Get Details About A Star Wars Character</h1>
+    <input placeholder="type name here" [(ngModel)]="searchTerm">
+    <input type="button" (click)="update()" value="Search">
+    <ul>
+        <li *ngFor="let character of infoArray">
+            <br>
+            Name: {{character.name}}<br>
+            Height: {{character.height}}<br>
+            Hair Color: {{character.hair_color}}<br>
+            Skin Color: {{character.skin_color}}<br>
+            Eye Color: {{character.eye_color}}<br>
+            Birth Year: {{character.birth_year}}<br>
+            Gender: {{character.gender}}<br>
+        </li>
+    </ul>
+
+    <h1>{{setup}}</h1>
+    <h2>{{punchline}}</h2>
+</div>

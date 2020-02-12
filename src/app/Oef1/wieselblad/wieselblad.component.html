@@ -1,0 +1,19 @@
+<h1>{{MyName}}</h1> 
+<h2>U starte dit programma</h2>
+<h3>op : {{vandaag | date: 'dd-mm-yy'}}</h3>
+<h3>om : {{vandaag | date:'HH:mm:ss'}}</h3>
+<p>geld dat ik aan een goed doel wil geven:</p> 
+<br> 
+{{randMoney | currency:'EUR'}}
+<br>
+<p>maar eerst moet ik een paar andere zaken regelen</p>
+<p *ngIf="randSchuld != null">Geld dat ik mensen nog verschuldigt ben</p>
+<br>
+<p *ngIf="randSchuld != null">{{randSchuld | currency:'EUR'}}</p>
+<br *ngIf="randSchuld != null">
+<br>
+<p *ngIf="randSchuld != null">{{MyMoney | currency:'EUR'}} dit is nog {{percent | percent}} van u begin bedrag</p>
+<br>
+<button (click)="AddDebt()">Voeg schuld toe</button>
+<br>
+<h1 *ngIf="MyMoney < 0">PLEASE STOP I CAN'T TAKE THIS ANYMORE</h1>

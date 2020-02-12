@@ -1,0 +1,36 @@
+<div class="grid-container2">
+        <div class="grid-item">
+              <div class="naam">{{getFullName()}}</div>
+        </div>
+      </div>
+<div class="grid-container">    
+<!--/////// Interpolation ///////-->
+    <div class="grid-item">
+            <div class="start">  De applicatie werd opgestart: <strong>{{message}}</strong>
+            </div>
+    </div>
+    <div class="grid-item">
+            <div class="teller">{{teller2}}</div>
+    </div>
+    <div class="grid-item">
+            <div class="bonus">Your Bonus: {{Total}}</div>
+    </div>
+
+<!--/////// Pipes ///////-->
+    <div class="grid-item">
+            <div class="datum">{{datum | date : "H:mm:ss"}}</div>
+    </div>
+    <div class="grid-item">
+            <div>{{datum | date : "mediumDate"}}</div>
+    </div>
+    <div class="grid-item">
+            <div>{{Balance | currency}}</div>
+    </div>
+</div>
+
+<!--------------------------------------------------->
+<div class="grid-container2">
+  <div class="grid-item">
+        <div class="school">{{School()}}</div>
+  </div>
+</div>

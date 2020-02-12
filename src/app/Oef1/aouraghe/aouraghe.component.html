@@ -1,0 +1,19 @@
+<link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+<div class="wrapper">
+    <div class="box a"><h1>{{name}}</h1></div>
+    <div class="box b"><p>{{Tijd | date : " dd/MM/yy, HH:mm "}}</p></div>
+    <div class="box c"><p>{{verjaardag | date : "fullDate"}}</p></div>
+    <div class="box d"><p>{{this.random2}} x {{this.random}}={{this.getal}}</p></div>
+    <div class="box e">{{format}}</div>
+    <div class="box f"></div>
+  </div>
+
+
+ 
+
+
+
+
+<h2>{{klas.Title | titlecase}}: {{klas.klasname}} </h2>
+<button (click)="toggleFormat()">knop</button>
+

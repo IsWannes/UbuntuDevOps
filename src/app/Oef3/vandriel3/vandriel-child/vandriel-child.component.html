@@ -1,0 +1,11 @@
+<h1>vandriel-child works!</h1>
+
+<p> A special x-mas message </p>
+<p> To: {{inputName}} </p>
+<p> From: {{inputFrom}} </p>
+<br>
+<input type="button" value="Send message" (click)="getInput()" />
+<br><br><br>    <!-- I don't like css  -->
+<div *ngIf="fuckoff && inputName && pressed ">Message: <b>{{fuckoff.message}}   </b></div>
+<div *ngIf="fuckoff && inputFrom && pressed"> From: <b>{{fuckoff.subtitle}}  </b></div>
+<br><br><br>    <!-- I don't like css  -->

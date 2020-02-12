@@ -1,0 +1,31 @@
+Coucke
+<p>Welke Jordi/Jordy is de beste?</p>
+
+
+<input type="button" (click)="UpVote()" (mouseover)="NameChange($event)" [class]="newClass" id="goodButton"
+    [value]="name1">
+
+<input type="button" (click)="UpVoteWrong()" [disabled]="option1" (mouseover)="NameChange2($event)" class="inline"
+    id="badButton" [value]="name2">
+
+<div class="clear"></div>
+
+<div *ngIf="Clicked">
+
+    <div class="inline2" *ngFor="let naam of namen">
+        <p>{{naam}}</p>
+    </div>
+
+    <div class="clear"></div>
+
+
+    <p class="inline2" id="1">{{PuntenCoucke}}</p>
+    <p class="inline2" id="2">{{PuntenAndere}}</p>
+
+</div>
+
+<input type="button" class="newbut" (click)="disableFunc($event)" (mouseover)="NameChange2($event)" value="Freeze!">
+
+<p>Jordi_Name_Converter:</p>
+<input #naam type="text" name="" id="" (keyup)="converter(naam.value)">
+<p>{{convertedName}}</p>

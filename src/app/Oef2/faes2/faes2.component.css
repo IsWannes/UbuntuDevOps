@@ -1,0 +1,35 @@
+input, button{
+    border: 1px solid rgb(0, 247, 255);
+    background:rgb(36, 36, 36);
+    color: rgb(0, 247, 255);
+    padding:10pt;
+    border-radius: 7pt;
+    margin-top:10pt;
+    margin-bottom: 10pt;
+}
+
+.mainDiv{
+    justify-self: center;
+    background:rgb(36, 36, 36);
+    border-radius: 10pt;
+    color:rgb(0, 247, 255);
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.imgDiv{
+    width: 100%;
+}
+
+img{
+    height: 20%;
+    width: 20%;
+}
+
+li{
+    list-style-type: none;
+    padding: 10px;
+    font-size: 14pt;
+}

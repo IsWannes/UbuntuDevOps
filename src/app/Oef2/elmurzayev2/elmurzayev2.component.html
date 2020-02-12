@@ -1,0 +1,14 @@
+Elmurzayev 
+<img [src]="url" alt="">
+<button (click)="changePhoto()">Verander foto</button>
+<button [disabled]="buttonDisabled">{{disabledButtonValue}}</button>
+<button (click)="disableButton()">DISABLE BUTTON</button>
+<p>Wat zie je op de foto?</p>
+<input [type]="inputType" [value]="inputValue">
+<button (click)="showCheckButton()">VERZENDEN</button>
+<button *ngIf="checkButton" >CHECK HET ANTWOORD</button>
+<tr *ngFor=" let naam of namen; let i = index">
+    <td>{{i+1}} {{naam}} </td>
+
+
+

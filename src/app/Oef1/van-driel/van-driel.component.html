@@ -1,0 +1,7 @@
+<h1><i innerText={{naam}}></i></h1> <!-- Interpolation manier 1 -->
+<p>{{CurrentTime | date: 'HH:mm:ss' }}</p> <!-- Pipe manier 1 -->
+
+<p>The current date-time is: {{CurrentTime | date:format }}</p> <!-- Pipe manier 2 -->
+<button (click)="toggleFormat()">Toggle Format</button> <!--Interpolation manier 2 -->
+
+<p> Stock value: {{randomNumber | currency:'CAD':'symbol-narrow':'4.2-2'}}</p> <!-- Interpolation manier 3 && pipes manier 3-->

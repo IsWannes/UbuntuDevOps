@@ -1,0 +1,38 @@
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: bold;
+font-style: italic;
+color:  white;
+font-size: 20px;
+
+
+}
+
+p{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color:  white;
+font-size: 15px;
+font-weight: bold;
+}
+.line{
+    display: inline-block;
+
+    border-bottom: solid white 2px;
+    height: 3px;
+    width: 50%;
+}
+.bigDiv{
+    text-align: center;
+    background: rgb(36, 36, 36);
+    border-radius: 5px;
+    padding: 20px 50px 50px 50px;
+    align-content: center;
+}
+
+button{
+    background: rgb(36, 36, 36);
+    border: solid rgb(151, 14, 98) 2px;
+    padding: 5px 5px 5px 5px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

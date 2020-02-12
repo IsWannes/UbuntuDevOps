@@ -1,0 +1,17 @@
+Christianen
+<h1>{{datum | date : "HH:mm:ss"}}</h1>
+<p *ngIf="IsMorning">Good morning.</p>
+<p *ngIf="IsAfternoon">Good afternoon.</p>
+<p *ngIf="IsEvening">Good evening.</p>
+
+<div>
+    <h2>{{header}}</h2>
+    <p *ngIf="items.length == 0">List is empty</p>
+  <ol>
+    <li *ngFor="let item of items; let i = index">{{item}} <button (click)="Delete(i)">X</button> </li>
+  </ol>
+  <form action="">
+    <input name="in1" #invoer type="text" [(ngModel)]="item" placeholder="Add item">
+    <button (click)="Add()" [disabled]="item == ''">Add</button>
+  </form>
+</div>

@@ -1,0 +1,43 @@
+#div {
+    
+      display: inline-flex;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+    
+    #div input {
+      vertical-align: middle;
+    }
+    
+    td {
+      cursor: pointer;
+    }
+    
+    .pokemoncontainer {
+      padding: 10px;
+      display: flex;
+    }
+    
+    .pokemonleft {
+    width: 50%;
+    }
+    
+    .pokemonright {
+    width: 50%;
+    align-content: center;
+    }
+    
+    #colordiv{
+        width: auto;
+        height: 100px;
+    }
+    
+    .redback{
+        background-color: red;
+    }
+    
+    .blueback{
+        background-color: blue;
+    }
+    
+    

@@ -1,0 +1,22 @@
+.inline {
+    display:inline-block;
+    margin-right:50px;
+ }
+
+ .inline3 {
+    display:inline-block;
+    background-color: yellow;
+    margin-right:50px;
+ }
+
+
+ .inline2 {
+    display:inline-block;
+    margin-right:110px;
+ }
+
+ .newbut
+ {
+    margin-top:15px;
+    margin-left: 50px;
+ }
